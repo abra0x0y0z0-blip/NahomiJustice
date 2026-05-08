@@ -1,0 +1,2417 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<!---
+Dedico mi trabajo a mi hija, ella en su edad de infinitos porques y descubrimientos diarios, me recordo que la mejor tecnologia no es la mas compleja, sino la que resuelve problemas reales con claridad y proposito.
+Porque si no puedo explicarle algo probablemente este muy complicado.
+--->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>NahomiJustice - Documenta tu Caso Legal</title>
+    <style>
+        /* Variables para modo oscuro (predeterminado) */
+        
+         :root {
+            --bg-primary: #1a1a2e;
+            --bg-secondary: #0f0f1a;
+            --bg-tertiary: #1e1e2e;
+            --bg-card: #0f0f18;
+            --border-color: #2a2a3a;
+            --text-primary: #ddd;
+            --text-secondary: #888;
+            --text-muted: #aaa;
+            --accent-color: #44d873;
+            --accent-hover: #5ee88a;
+            --danger-color: #e74c3c;
+            --warning-color: #f39c12;
+            --input-border: #3a3a4a;
+            --input-bg: #1e1e2e;
+            --menu-bg: #1e1e2e;
+            --toast-bg: #4453d8;
+            --toast-text: #0f0f18;
+            --text-item: #08802c;
+        }
+        /* Modo claro */
+        
+        body.light-mode {
+            --bg-primary: #c4dcff;
+            --bg-secondary: #efefef;
+            --bg-tertiary: #f8f9fa;
+            --bg-card: #ffffff;
+            --border-color: #aacbee;
+            --text-primary: #060622;
+            --text-secondary: #36414b;
+            --text-muted: #3e4042;
+            --accent-color: #4b6c9e;
+            --accent-hover: #6a93d1;
+            --danger-color: #dc3545;
+            --warning-color: #7a5d04;
+            --input-bg: #ffffff;
+            --input-border: #ced4da;
+            --menu-bg: #ffffff;
+            --toast-bg: #0d6efd;
+            --toast-text: #ffffff;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Courier New', monospace;
+            background: var(--bg-primary);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            /* Evita scroll en body */
+        }
+        
+        .top-bar {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 8px 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-shrink: 0;
+        }
+        
+        .logo {
+            color: #d49cbe;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+        
+        .logo span {
+            color: #1adaf3;
+            font-size: 14px;
+        }
+        
+        .menu {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .menu-btn {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--input-border);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        
+        .menu-btn:hover {
+            background: var(--border-color);
+            border-color: var(--text-item);
+            color: var(--text-item);
+        }
+        
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--bg-tertiary);
+            min-width: 200px;
+            border: 1px solid var(--input-border);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 2000;
+        }
+        
+        .menu-content button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 10px 16px;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 13px;
+            transition: 0.1s;
+        }
+        
+        .menu-content button:hover {
+            background: var(--border-color);
+            color: var(--text-item);
+        }
+        
+        .menu:hover .menu-content {
+            display: block;
+        }
+        
+        .divider {
+            width: 1px;
+            height: 30px;
+            background: var(--border-color);
+            margin: 0 4px;
+        }
+        
+        .status-text {
+            font-size: 11px;
+            color: var(--text-secondary);
+            flex: 1;
+        }
+        
+        .main-container {
+            display: flex;
+            flex: 1;
+            min-height: 0;
+            /* Importante para flex */
+            overflow: hidden;
+        }
+        
+        .selector-panel {
+            width: 350px;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            min-height: 0;
+        }
+        
+        .selector-header {
+            padding: 15px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        
+        .selector-header h3 {
+            margin: 0;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+        
+        .selector-content {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            min-height: 0;
+        }
+        
+        .json-upload {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .upload-label {
+            background: var(--border-color);
+            color: var(--accent-color);
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .upload-label:hover {
+            background: var(--input-border);
+        }
+        
+        input[type="file"] {
+            display: none;
+        }
+        
+        .file-info {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .categoria-group {
+            margin-bottom: 20px;
+        }
+        
+        .categoria-label {
+            color: var(--accent-color);
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+        }
+        
+        .ley-select {
+            width: 100%;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--input-border);
+            color: var(--text-primary);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        
+        .ley-select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+        
+        .reset-btn {
+            background: var(--border-color);
+            border: none;
+            color: var(--text-primary);
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .reset-btn:hover {
+            background: var(--input-border);
+            color: var(--danger-color);
+        }
+        
+        .view-panel {
+            flex: 1;
+            background: var(--bg-tertiary);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            min-height: 0;
+            /* Crucial*/
+        }
+        
+        .view-header {
+            padding: 10px 20px;
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        .view-header h3 {
+            margin: 0;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+        
+        .view-tools {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .btn-small {
+            background: var(--border-color);
+            border: none;
+            color: var(--text-primary);
+            padding: 4px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+        }
+        
+        .btn-small:hover {
+            background: var(--input-border);
+            color: var(--text-item);
+        }
+        
+        .btn-grande {
+            background: var(--accent-color);
+            border: none;
+            color: var(--bg-card);
+            padding: 15px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 15px;
+            transition: transform 0.1s;
+        }
+        
+        .btn-grande:hover {
+            transform: scale(1.02);
+            background: var(--accent-hover);
+        }
+        
+        .content-wrapper {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            min-height: 0;
+            max-height: 100%;
+        }
+        
+        .articulo-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .articulo-titulo {
+            color: var(--accent-color);
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .articulo-contenido {
+            color: var(--text-primary);
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-family: 'Courier New', monospace;
+            max-height: none;
+            overflow-y: visible;
+        }
+        
+        .articulo-imagenes {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .articulo-imagen {
+            max-width: 150px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .articulo-imagen:hover {
+            transform: scale(1.05);
+        }
+        
+        .articulo-documentos {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .documento-item {
+            background: var(--bg-primary);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: var(--text-item);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .articulo-aplica {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-color);
+            font-size: 12px;
+            color: var(--warning-color);
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+        
+        .error-msg {
+            background: #641010;
+            border-left: 3px solid var(--danger-color);
+            padding: 10px;
+            border-radius: 6px;
+            color: #fafafa;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .info-bar {
+            padding: 8px 20px;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            font-size: 11px;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+        /* Popup - Scroll controlado dentro del div */
+        
+        .leyEditor-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.94);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .leyEditor-overlay.active {
+            display: flex;
+        }
+        
+        .leyEditor-popup {
+            background: var(--bg-card);
+            border: 2px solid var(--accent-color);
+            border-radius: 24px;
+            width: 95%;
+            height: 95%;
+            max-width: 1400px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .close-editor-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: var(--danger-color);
+            border: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10001;
+            transition: all 0.2s ease;
+        }
+        
+        .close-editor-btn:hover {
+            background: #c0392b;
+            transform: scale(1.05);
+        }
+        /* Contenedor interno del popup con scroll controlado */
+        
+        .popup-inner-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            min-height: 0;
+        }
+        /* Panel izquierdo del popup con scroll */
+        
+        .popup-form-panel {
+            flex: 1;
+            min-width: 300px;
+            background: var(--bg-secondary);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .popup-form-header {
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        
+        .popup-form-header h2 {
+            color: var(--accent-color);
+            margin: 0;
+        }
+        
+        .popup-form-header p {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin: 8px 0 0 0;
+        }
+        
+        .popup-form-scroll {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            min-height: 0;
+        }
+        /* Panel derecho del popup con scroll */
+        
+        .popup-preview-panel {
+            flex: 1;
+            min-width: 300px;
+            background: var(--bg-tertiary);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .popup-preview-header {
+            padding: 15px;
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        
+        .popup-preview-header h3 {
+            color: var(--accent-color);
+            margin: 0;
+        }
+        
+        .popup-preview-scroll {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            min-height: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: var(--accent-color);
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--input-border);
+            color: var(--text-primary);
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 8px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-primary);
+            font-size: 13px;
+            background: var(--bg-primary);
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        
+        .checkbox-item input {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+            cursor: pointer;
+        }
+        
+        .upload-zone {
+            background: var(--bg-primary);
+            border: 2px dashed var(--input-border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .upload-zone:hover {
+            border-color: var(--accent-color);
+            background: #1e1e32;
+        }
+        
+        .upload-zone .btn-upload {
+            background: var(--border-color);
+            color: var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .image-preview {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .preview-item {
+            position: relative;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .preview-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid var(--accent-color);
+        }
+        
+        .preview-pdf {
+            width: 80px;
+            height: 80px;
+            background: var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            text-align: center;
+            padding: 5px;
+            border: 2px solid var(--accent-color);
+        }
+        
+        .remove-item {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--danger-color);
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .btn-primary {
+            background: var(--accent-color);
+            border: none;
+            color: var(--bg-card);
+            padding: 14px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            width: 100%;
+            margin-top: 10px;
+            transition: transform 0.1s;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: scale(1.01);
+        }
+        
+        .btn-secondary {
+            background: var(--border-color);
+            border: none;
+            color: var(--text-primary);
+            padding: 12px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .button-group button {
+            flex: 1;
+        }
+        
+        .json-preview {
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            color: var(--text-item);
+            white-space: pre-wrap;
+            word-break: break-all;
+            background: var(--bg-card);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .toast-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: var(--bg-card);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            z-index: 10001;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .modal-imagen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 20000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .modal-imagen.active {
+            display: flex;
+        }
+        
+        .modal-imagen img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .selector-panel {
+                width: 100%;
+                max-height: 40%;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .popup-inner-container {
+                flex-direction: column;
+            }
+            .checkbox-item {
+                padding: 5px 12px;
+                font-size: 12px;
+            }
+        }
+        
+        .info-note {
+            background: var(--bg-primary);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            text-align: center;
+        }
+        /* Estilos para pestañas */
+        
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        
+        .tab-btn:hover {
+            background: var(--bg-tertiary);
+            color: var(--accent-color);
+        }
+        
+        .tab-btn.active {
+            background: var(--accent-color);
+            color: var(--bg-card);
+        }
+        /**/
+        /* Estilos para LexNexus integrado */
+        
+        .situacion-item {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .situacion-item:hover {
+            background: var(--border-color);
+            transform: translateX(5px);
+        }
+        
+        .situacion-item.selected {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .situacion-item.selected .situacion-nombre {
+            color: var(--bg-card);
+        }
+        
+        .situacion-nombre {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 14px;
+        }
+        
+        .situacion-descripcion {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-top: 5px;
+        }
+        
+        .situacion-articulos {
+            font-size: 10px;
+            color: var(--warning-color);
+            margin-top: 8px;
+        }
+        
+        .badge {
+            background: var(--accent-color);
+            color: var(--bg-card);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            display: inline-block;
+        }
+        
+        .articulo-penalidad {
+            margin-top: 15px;
+            padding: 12px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            font-size: 13px;
+            color: var(--warning-color);
+            border-left: 3px solid var(--warning-color);
+        }
+        /* Estilos para el área de selectores del caso */
+        
+        .caso-selector-area {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px;
+            flex-shrink: 0;
+        }
+        
+        .categoria-group-micaso {
+            margin-bottom: 15px;
+        }
+        
+        .categoria-label-micaso {
+            color: var(--accent-color);
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .ley-select-micaso {
+            width: 100%;
+            background: var(--input-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+        
+        .ley-select-micaso:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+        
+        .loadCaseBtn .btnLeyEditor {
+            background: var(--toast-bg);
+            color: #0f0f18;
+        }
+        /*
+        ============================================
+           MODO CLARO / OSCURO
+        ============================================
+        */
+        /* Aplicar variables */
+        
+        body {
+            background: var(--bg-primary);
+        }
+        
+        .top-bar {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .menu-btn {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+        
+        .menu-btn:hover {
+            background: var(--border-color);
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+        
+        .menu-content {
+            background: var(--menu-bg);
+            border: 1px solid var(--border-color);
+        }
+        
+        .menu-content button {
+            color: var(--text-primary);
+        }
+        
+        .menu-content button:hover {
+            background: var(--border-color);
+            color: var(--accent-color);
+        }
+        
+        .status-text {
+            color: var(--text-secondary);
+        }
+        
+        .selector-panel {
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border-color);
+        }
+        
+        .selector-header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .selector-header h3 {
+            color: var(--text-primary);
+        }
+        
+        .json-upload {
+            background: var(--bg-primary);
+        }
+        
+        .upload-label {
+            background: var(--bg-tertiary);
+            color: var(--accent-color);
+        }
+        
+        .upload-label:hover {
+            background: var(--border-color);
+        }
+        
+        .file-info {
+            color: var(--text-secondary);
+        }
+        
+        .categoria-label {
+            color: var(--accent-color);
+        }
+        
+        .ley-select {
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
+            color: var(--text-primary);
+        }
+        
+        .ley-select:focus {
+            border-color: var(--accent-color);
+        }
+        
+        .reset-btn {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+        
+        .reset-btn:hover {
+            background: var(--border-color);
+            color: var(--danger-color);
+        }
+        
+        .view-panel {
+            background: var(--bg-tertiary);
+        }
+        
+        .view-header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .view-header h3 {
+            color: var(--text-primary);
+        }
+        
+        .btn-small {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+        
+        .btn-small:hover {
+            background: var(--border-color);
+            color: var(--accent-color);
+        }
+        
+        .content-wrapper {
+            background: var(--bg-tertiary);
+        }
+        
+        .articulo-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+        }
+        
+        .articulo-titulo {
+            color: var(--accent-color);
+        }
+        
+        .articulo-contenido {
+            color: var(--text-primary);
+        }
+        
+        .articulo-aplica {
+            color: var(--warning-color);
+        }
+        
+        .empty-state {
+            color: var(--text-secondary);
+        }
+        
+        .error-msg {
+            background: var(--danger-color);
+            color: #ffffff;
+        }
+        
+        .info-bar {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+        /* Modo claro para el editor popup */
+        
+        body.light-mode .leyEditor-popup {
+            background: var(--bg-secondary);
+            border-color: var(--accent-color);
+        }
+        
+        body.light-mode .popup-form-panel {
+            background: var(--bg-secondary);
+        }
+        
+        body.light-mode .popup-form-header {
+            background: var(--bg-secondary);
+            border-bottom-color: var(--border-color);
+        }
+        
+        body.light-mode .popup-preview-panel {
+            background: var(--bg-tertiary);
+        }
+        
+        body.light-mode .popup-preview-header {
+            background: var(--bg-secondary);
+            border-bottom-color: var(--border-color);
+        }
+        
+        body.light-mode .form-group input,
+        body.light-mode .form-group textarea,
+        body.light-mode .form-group select {
+            background: var(--input-bg);
+            border-color: var(--input-border);
+            color: var(--text-primary);
+        }
+        
+        body.light-mode .checkbox-item {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+        
+        body.light-mode .upload-zone {
+            background: var(--bg-tertiary);
+            border-color: var(--border-color);
+        }
+        
+        body.light-mode .upload-zone:hover {
+            border-color: var(--accent-color);
+            background: var(--border-color);
+        }
+        
+        body.light-mode .preview-pdf {
+            background: var(--bg-tertiary);
+            border-color: var(--accent-color);
+            color: var(--text-primary);
+        }
+        
+        body.light-mode .json-preview {
+            background: var(--bg-secondary);
+            color: var(--accent-color);
+        }
+        
+        body.light-mode .info-note {
+            background: var(--bg-primary);
+            color: var(--text-secondary);
+        }
+        /* Bot?n de cambio de tema */
+        
+        .theme-toggle {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .theme-toggle:hover {
+            background: var(--border-color);
+            border-color: var(--accent-color);
+        }
+        
+        .theme-toggle .icon {
+            font-size: 16px;
+        }
+        /* Toasts en modo claro */
+        
+        body.light-mode .toast-notification {
+            background: var(--toast-bg);
+            color: var(--toast-text);
+        }
+        /* Modal en modo claro */
+        
+        body.light-mode .modal-imagen {
+            background: rgba(0, 0, 0, 0.95);
+        }
+        /* Scrollbar personalizada para modo claro (opcional) */
+        
+        body.light-mode ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        body.light-mode ::-webkit-scrollbar-track {
+            background: var(--bg-tertiary);
+        }
+        
+        body.light-mode ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+        
+        body.light-mode ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="logo">⚖️ NAHOMI<span> JUSTICE</span></div>
+        <!-- Botón de cambio de tema - AGREGAR ESTO -->
+        <button id="themeToggle" class="theme-toggle">
+        <span class="icon">🌙</span>
+    
+    </button>
+
+        <div class="menu">
+            <button class="menu-btn" id="menuBtn">📋 Menú</button>
+            <div class="menu-content" id="menuContent">
+                <button id="printAllBtn">🖨️ Imprimir mi caso</button>
+                <button id="exportJsonBtn">💾 Guardar copia</button>
+                <button id="helpBtn">❓ Ayuda</button>
+                <button id="resetBtn" class="reset-btn">🗑️ Reiniciar todo</button>
+            </div>
+        </div>
+
+        <!-- Input file para cargar caso FUERA del menú -->
+        <input type="file" id="jsonFileInput" accept=".json" style="display: none;">
+        <button id="loadCaseBtn" class="menu-btn">📁 Cargar caso</button>
+        <div id="fileInfo" class="file-info">Ninguna base legal cargada</div>
+        <div class="divider"></div>
+        <div id="statusText" class="status-text">⚖️ Listo para documentar tu caso</div>
+    </div>
+
+    <div class="main-container">
+
+
+        <div class="selector-panel">
+            <div class="selector-header">
+                <h3>🔍 Catálogo de Situaciones Legales</h3>
+            </div>
+            <div class="selector-content">
+                <!-- Zona para cargar base legal de LexNexus -->
+                <div class="json-upload">
+                    <label class="upload-label" for="lexJsonInput">📚 Cargar base legal</label>
+                    <input type="file" id="lexJsonInput" accept=".json">
+                    <div id="lexFileInfo" class="file-info">Ninguna base legal cargada</div>
+                </div>
+
+                <!-- Lista de situaciones legales (LexNexus) -->
+                <div id="situacionesList" style="margin-top: 15px;">
+                    <div class="empty-state">
+                        📁 Carga un archivo JSON con<br> la base legal para comenzar<br> se mostrara en: ⚖️ Leyes Aplicables
+                    </div>
+                </div>
+
+                <button id="resetLexBtn" class="reset-btn">🗑️ Reiniciar consulta legal</button>
+                <div class="info-note">
+                    💡 Tip: Las leyes te ayudan a conocer tus derechos
+                </div>
+            </div>
+        </div>
+
+        <div class="view-panel">
+            <div class="view-header">
+                <div style="display: flex; gap: 20px;">
+                    <button id="tabMiCaso" class="tab-btn active">📝 Mi Caso</button>
+                    <button id="tabLeyes" class="tab-btn">⚖️ Leyes Aplicables</button>
+                </div>
+                <div class="view-tools">
+                    <button id="btnLeyEditor" class="btn-small">✏️ Crear mi Caso</button>
+                    <button id="clearViewBtn" class="btn-small">🗑️ Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Contenido de "Mi Caso" -->
+            <div id="miCasoContent" class="content-wrapper" style="display: block; flex-direction: column;">
+
+                <!-- NUEVO: Selectores de categorías del caso (antes estaban en panel izquierdo) -->
+                <div id="casoSelectorContainer" class="caso-selector-area" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color); padding: 15px; flex-shrink: 0;">
+                    <div style="margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+                        <!---
+                        <h4 style="margin: 0; color: var(--accent-color);">📂 Mi Caso Guardado</h4>
+                        <button id="toggleSelectorsBtn" class="btn-small" style="font-size: 10px;">📋 Ocultar</button>
+ --->
+                    </div>
+                    <div id="selectorContainer" style="max-height: 200px; overflow-y: auto;"></div>
+                </div>
+
+                <!-- Área donde se muestra el contenido del caso -->
+                <div id="casoContentArea" style="flex: 1; overflow-y: auto; padding: 20px; min-height: 0;">
+                    <div class="empty-state">
+                        📁 ¡Hola! Aquí podrás ver tu caso<br><br> Presiona el botón <strong style="color:#44d873">"Crear mi Caso"</strong> para comenzar a documentar lo que pasó.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido de "Leyes Aplicables" -->
+            <div id="leyesContent" class="content-wrapper" style="display: none; overflow-y: auto; padding: 20px;">
+                <div class="empty-state">
+                    ⚖️ SELECCIONA UNA SITUACIÓN<br><br> Haz clic en cualquier elemento de la lista izquierda<br> para ver los artículos legales que aplican a tu caso
+                </div>
+            </div>
+
+            <div class="info-bar">
+                <div id="casoStats">📚 Sin caso</div>
+                <div id="lexStats">⚖️ Sin base legal</div>
+                <div>⚖️ Nahomi Justice + LexNexus</div>
+            </div>
+        </div>
+
+        <!-- Popup para crear caso - Scroll controlado dentro de los divs -->
+        <div id="leyEditorOverlay" class="leyEditor-overlay">
+            <div class="leyEditor-popup">
+                <button class="close-editor-btn" id="closeEditorBtn">✖</button>
+
+                <div class="popup-inner-container">
+                    <!-- Panel izquierdo - Formulario con scroll interno -->
+                    <div class="popup-form-panel">
+                        <div class="popup-form-header">
+                            <h2>✏️ Documenta tu caso</h2>
+                            <p>Relájate y describe que paso, adjunta fotos y documentos que respalden tu situación</p>
+                        </div>
+                        <div class="popup-form-scroll">
+                            <div class="form-group">
+                                <label>📌 ¿Cómo se llama tu caso? *</label>
+                                <input type="text" id="editTituloCaso" placeholder="Ej: Despido injustificado, Problema con vecinos, etc.">
+                            </div>
+                            <div class="form-group">
+                                <label>🏷️ Tipo de problema *</label>
+                                <input type="text" id="editCategoriaNombre" placeholder="Ej: Laboral, Familiar, Civil, Penal, Vecinal">
+                            </div>
+                            <div class="form-group">
+                                <label>📝 Título del hecho *</label>
+                                <input type="text" id="editTexto" placeholder="Ej: Lo que pasó el día...">
+                            </div>
+                            <div class="form-group">
+                                <label>📖 Cuéntanos detalladamente qué pasó *</label>
+                                <textarea id="editContenido" placeholder="Escribe aquí toda la historia: fechas, personas involucradas, lugares, testigos, etc. Mientras más detalles, mejor."></textarea>
+                            </div>
+
+                            <!-- Zona para FOTOS -->
+                            <div class="form-group">
+                                <label>📸 Fotos como evidencia</label>
+                                <div class="upload-zone" id="fotosZone" onclick="document.getElementById('fotosInput').click()">
+                                    <span class="btn-upload">📷 Haz clic para subir fotos</span>
+                                    <div style="font-size: 11px; margin-top: 5px;">Puedes subir varias fotos</div>
+                                </div>
+                                <input type="file" id="fotosInput" accept="image/*" multiple style="display: none;">
+                                <div id="fotosPreview" class="image-preview"></div>
+                            </div>
+
+                            <!-- Zona para DOCUMENTOS -->
+                            <div class="form-group">
+                                <label>📄 Documentos legales (cartas, recibos, contratos)</label>
+                                <div class="upload-zone" id="docsZone" onclick="document.getElementById('docsInput').click()">
+                                    <span class="btn-upload">📎 Haz clic para subir documentos</span>
+                                    <div style="font-size: 11px; margin-top: 5px;">PDF, fotos de documentos, recibos, etc.</div>
+                                </div>
+                                <input type="file" id="docsInput" accept="image/*,application/pdf" multiple style="display: none;">
+                                <div id="docsPreview" class="image-preview"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>👥 ¿A quiénes afecta este problema?</label>
+                                <div class="checkbox-group" id="editAplicaContainer">
+                                    <label class="checkbox-item"><input type="checkbox" value="A mí mismo"> A mí mismo</label>
+                                    <label class="checkbox-item"><input type="checkbox" value="A mi familia"> A mi familia</label>
+                                    <label class="checkbox-item"><input type="checkbox" value="A mi comunidad"> A mi comunidad</label>
+                                    <label class="checkbox-item"><input type="checkbox" value="A varios compañeros"> A varios compañeros</label>
+                                </div>
+                            </div>
+
+                            <div class="button-group">
+                                <button id="addArticuloBtn" class="btn-primary">➕ Agregar este hecho</button>
+                                <button id="saveCasoBtn" class="btn-primary" style="background: #2196F3;">💾 Guardar y ver mi caso</button>
+                            </div>
+                            <div class="button-group">
+                                <button id="previewJsonBtn" class="btn-secondary">👁️ Ver resumen</button>
+                                <button id="clearEditorBtn" class="btn-secondary">🗑️ Limpiar todo</button>
+                                <button id="loadExampleBtn" class="btn-secondary">📋 Ver ejemplo</button>
+                            </div>
+                            <p class="info-note">Toda la información aquí expuesta es privada, el programa no guarda nada no dejes de obtener ayuda con el experto en leyes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Panel derecho - Resumen con scroll interno -->
+                    <div class="popup-preview-panel">
+                        <div class="popup-preview-header">
+                            <h3>📋 Resumen de tu caso</h3>
+                        </div>
+                        <div class="popup-preview-scroll">
+                            <div id="jsonPreview" class="json-preview"></div>
+                        </div>
+                        <div style="padding: 15px; border-top: 1px solid #2a2a3a; flex-shrink: 0;">
+                            <button id="exportJsonPreviewBtn" class="btn-secondary" style="width: 100%;">💾 Guardar borrador</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para ver imágenes grandes -->
+        <div id="imageModal" class="modal-imagen">
+            <img id="modalImage" src="" alt="Evidencia ampliada">
+        </div>
+        <script>
+            // ==========================================================
+            // NAHOMI JUSTICE - VERSIÓN SIN LOCALSTORAGE
+            // Solo guardar/leer archivos - Scroll controlado
+            // ==========================================================
+
+            let leyesActual = null;
+            let selects = {};
+            let mapaArticulos = {};
+
+            // Variables separadas para fotos y documentos
+            let fotosBase64 = [];
+            let documentosBase64 = [];
+
+            // Elementos DOM - CORREGIDOS
+            const fileInput = document.getElementById('jsonFileInput');
+            const fileInfo = document.getElementById('fileInfo');
+            const resetBtn = document.getElementById('resetBtn');
+            const selectorContainer = document.getElementById('selectorContainer');
+            const casoStats = document.getElementById('casoStats');
+            const lexStats = document.getElementById('lexStats');
+            const clearViewBtn = document.getElementById('clearViewBtn');
+
+            const fotosInput = document.getElementById('fotosInput');
+            const fotosPreview = document.getElementById('fotosPreview');
+            const docsInput = document.getElementById('docsInput');
+            const docsPreview = document.getElementById('docsPreview');
+
+            function escapeHtml(texto) {
+                if (!texto) return '';
+                return texto
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            function mostrarToast(mensaje, tipo = 'success') {
+                const toast = document.createElement('div');
+                toast.className = 'toast-notification';
+                toast.style.background = tipo === 'error' ? '#e74c3c' : '#44d873';
+                toast.style.color = '#0f0f18';
+                toast.innerText = mensaje;
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 3000);
+            }
+
+            function convertirArchivoABase64(file) {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = () => resolve(reader.result);
+                    reader.onerror = reject;
+                    reader.readAsDataURL(file);
+                });
+            }
+
+            function mostrarImagenAmpliada(src) {
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImage');
+                modalImg.src = src;
+                modal.classList.add('active');
+            }
+
+            // Función para construir selectores del caso (ahora se muestran en el panel derecho)
+            function construirSelector(leyes) {
+                const selectorContainer = document.getElementById('selectorContainer');
+                selectorContainer.innerHTML = '';
+                selects = {};
+                mapaArticulos = {};
+
+                if (!leyes.categorias || !Array.isArray(leyes.categorias)) {
+                    selectorContainer.innerHTML = '<div class="error-msg">❌ El caso no tiene estructura válida</div>';
+                    return;
+                }
+
+                leyes.categorias.forEach(cat => {
+                    const grupo = document.createElement('div');
+                    grupo.className = 'categoria-group-micaso';
+                    grupo.style.marginBottom = '15px';
+
+                    const headerDiv = document.createElement('div');
+                    headerDiv.style.display = 'flex';
+                    headerDiv.style.justifyContent = 'space-between';
+                    headerDiv.style.alignItems = 'center';
+                    headerDiv.style.marginBottom = '8px';
+
+                    const label = document.createElement('label');
+                    label.className = 'categoria-label-micaso';
+                    label.style.color = 'var(--accent-color)';
+                    label.style.fontSize = '12px';
+                    label.style.fontWeight = 'bold';
+                    label.innerText = cat.nombre;
+
+                    const editCatBtn = document.createElement('button');
+                    editCatBtn.innerText = '✏️ Editar';
+                    editCatBtn.style.background = 'var(--bg-tertiary)';
+                    editCatBtn.style.border = '1px solid var(--border-color)';
+                    editCatBtn.style.color = 'var(--accent-color)';
+                    editCatBtn.style.padding = '2px 8px';
+                    editCatBtn.style.borderRadius = '6px';
+                    editCatBtn.style.cursor = 'pointer';
+                    editCatBtn.style.fontSize = '10px';
+                    editCatBtn.onclick = () => {
+                        abrirLeyEditor();
+                        cargarCategoriaAlEditor(cat.id);
+                    };
+
+                    headerDiv.appendChild(label);
+                    headerDiv.appendChild(editCatBtn);
+                    grupo.appendChild(headerDiv);
+
+                    const select = document.createElement('select');
+                    select.className = 'ley-select-micaso';
+                    select.style.width = '100%';
+                    select.style.background = 'var(--input-bg)';
+                    select.style.border = '1px solid var(--border-color)';
+                    select.style.color = 'var(--text-primary)';
+                    select.style.padding = '8px';
+                    select.style.borderRadius = '8px';
+                    select.style.fontSize = '12px';
+
+                    const optionDefault = document.createElement('option');
+                    optionDefault.value = '';
+                    optionDefault.innerText = '-- Seleccionar --';
+                    select.appendChild(optionDefault);
+
+                    if (cat.opciones && Array.isArray(cat.opciones)) {
+                        cat.opciones.forEach(op => {
+                            const option = document.createElement('option');
+                            option.value = op.valor;
+                            option.innerText = op.texto;
+                            select.appendChild(option);
+                            mapaArticulos[`${cat.id}.${op.valor}`] = op;
+                        });
+                    }
+
+                    grupo.appendChild(select);
+                    selectorContainer.appendChild(grupo);
+                    selects[cat.id] = select;
+
+                    select.addEventListener('change', () => {
+                        for (let otroId in selects) {
+                            if (otroId !== cat.id) selects[otroId].value = '';
+                        }
+                        actualizarVista();
+                    });
+                });
+
+                const totalArticulos = Object.keys(mapaArticulos).length;
+                casoStats.innerHTML = `📚 ${totalArticulos} hecho(s) documentado(s) | ${Object.keys(selects).length} categoría(s)`;
+            }
+
+            // Actualizar vista para usar el nuevo contenedor
+            function actualizarVista() {
+                let articuloSeleccionado = null;
+                for (let catId in selects) {
+                    const select = selects[catId];
+                    if (select.value && select.value !== '') {
+                        const clave = `${catId}.${select.value}`;
+                        articuloSeleccionado = mapaArticulos[clave];
+                        break;
+                    }
+                }
+
+                const casoContentArea = document.getElementById('casoContentArea');
+                if (!articuloSeleccionado) {
+                    casoContentArea.innerHTML = '<div class="empty-state">📜 Selecciona un tema para ver los detalles de tu caso</div>';
+                    return;
+                }
+
+                let articuloKey = '';
+                for (let catId in selects) {
+                    if (selects[catId].value) {
+                        articuloKey = `${catId}.${selects[catId].value}`;
+                        break;
+                    }
+                }
+
+                let html = `
+            <div class="articulo-card">
+                <div class="articulo-titulo">📜 ${escapeHtml(articuloSeleccionado.texto)}</div>
+                <div class="articulo-contenido">${escapeHtml(articuloSeleccionado.contenido).replace(/\n/g, '<br>')}</div>
+            `;
+
+                if (articuloSeleccionado.fotos && articuloSeleccionado.fotos.length > 0) {
+                    html += `<div class="articulo-imagenes"><strong style="color:var(--accent-color);">📸 Fotos de evidencia:</strong><br>`;
+                    articuloSeleccionado.fotos.forEach((img, idx) => {
+                        html += `
+                    <div style="display:inline-block; position:relative; margin:5px;">
+                        <img src="${img}" class="articulo-imagen" onclick="mostrarImagenAmpliada('${img}')" alt="Evidencia">
+                        <button class="btn-small" style="margin-top:5px; display:block;" onclick="extraerDocumento('${articuloKey}', ${idx}, 'foto')">📥 Descargar</button>
+                    </div>
+                `;
+                    });
+                    html += `</div>`;
+                }
+
+                if (articuloSeleccionado.documentos && articuloSeleccionado.documentos.length > 0) {
+                    html += `<div class="articulo-documentos"><strong style="color:var(--accent-color);">📄 Documentos adjuntos:</strong><br>`;
+                    articuloSeleccionado.documentos.forEach((doc, idx) => {
+                        if (doc.tipo === 'pdf') {
+                            html += `
+                        <div class="documento-item">
+                            📎 ${escapeHtml(doc.nombre)}
+                            <button class="btn-small" onclick="extraerDocumento('${articuloKey}', ${idx}, 'doc')">📥 Descargar</button>
+                        </div>
+                    `;
+                        } else {
+                            html += `
+                        <div style="display:inline-block; position:relative; margin:5px;">
+                            <img src="${doc.archivo}" class="articulo-imagen" onclick="mostrarImagenAmpliada('${doc.archivo}')" alt="Documento">
+                            <button class="btn-small" style="margin-top:5px; display:block;" onclick="extraerDocumento('${articuloKey}', ${idx}, 'doc')">📥 Descargar</button>
+                        </div>
+                    `;
+                        }
+                    });
+                    html += `</div>`;
+                }
+
+                if (articuloSeleccionado.aplica && articuloSeleccionado.aplica.length > 0) {
+                    html += `<div class="articulo-aplica">👥 Afecta a: ${articuloSeleccionado.aplica.join(', ')}</div>`;
+                }
+
+                html += `</div>`;
+                casoContentArea.innerHTML = html;
+            }
+
+            function cargarLeyesDesdeArchivo(file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const jsonData = JSON.parse(e.target.result);
+                        if (!jsonData.categorias || !Array.isArray(jsonData.categorias)) {
+                            throw new Error('El JSON debe tener una propiedad "categorias"');
+                        }
+                        leyesActual = jsonData;
+                        construirSelector(leyesActual);
+                        fileInfo.innerText = `📄 Cargado: ${file.name}`;
+                        document.getElementById('statusText').innerHTML = `⚖️ ${leyesActual.titulo || 'Caso cargado'}`;
+                        actualizarVista();
+                        mostrarToast('✅ Tu caso ha sido cargado');
+                        cargarCasoAlEditor(leyesActual);
+                    } catch (error) {
+                        fileInfo.innerText = `❌ Error: ${error.message}`;
+                        mostrarToast('❌ Error al cargar el archivo', 'error');
+                    }
+                };
+                reader.readAsText(file);
+            }
+
+            function cargarCasoAlEditor(caso) {
+                if (!caso) return;
+                editorData = JSON.parse(JSON.stringify(caso));
+                actualizarPreviewJSON();
+                limpiarPrevisualizaciones();
+                if (caso.titulo) {
+                    document.getElementById('editTituloCaso').value = caso.titulo;
+                }
+                mostrarToast('📋 Caso cargado al editor, puedes modificarlo');
+            }
+
+            function cargarCategoriaAlEditor(categoriaId) {
+                const categoria = editorData.categorias.find(c => c.id === categoriaId);
+                if (!categoria || categoria.opciones.length === 0) return;
+                const ultimoArticulo = categoria.opciones[categoria.opciones.length - 1];
+                if (ultimoArticulo) {
+                    document.getElementById('editCategoriaNombre').value = categoria.nombre;
+                    document.getElementById('editTexto').value = ultimoArticulo.texto || '';
+                    document.getElementById('editContenido').value = ultimoArticulo.contenido || '';
+                    limpiarPrevisualizaciones();
+                    if (ultimoArticulo.fotos && ultimoArticulo.fotos.length > 0) {
+                        fotosBase64 = [...ultimoArticulo.fotos];
+                        fotosBase64.forEach(foto => {
+                            mostrarPreviewFoto(foto, fotosPreview);
+                        });
+                    }
+                    if (ultimoArticulo.documentos && ultimoArticulo.documentos.length > 0) {
+                        documentosBase64 = [...ultimoArticulo.documentos];
+                        documentosBase64.forEach(doc => {
+                            mostrarPreviewDocumento(doc, docsPreview);
+                        });
+                    }
+                    if (ultimoArticulo.aplica && ultimoArticulo.aplica.length > 0) {
+                        const checkboxes = document.querySelectorAll('#editAplicaContainer input');
+                        checkboxes.forEach(cb => {
+                            cb.checked = ultimoArticulo.aplica.includes(cb.value);
+                        });
+                    }
+                    mostrarToast('✅ Categoría cargada para edición');
+                }
+            }
+
+            function extraerDocumento(articuloKey, docIndex, tipo) {
+                if (!leyesActual) {
+                    mostrarToast('❌ No hay caso cargado', 'error');
+                    return;
+                }
+                const articulo = mapaArticulos[articuloKey];
+                if (!articulo) return;
+                let documento = null;
+                if (tipo === 'foto' && articulo.fotos && articulo.fotos[docIndex]) {
+                    documento = articulo.fotos[docIndex];
+                } else if (tipo === 'doc' && articulo.documentos && articulo.documentos[docIndex]) {
+                    documento = articulo.documentos[docIndex];
+                }
+                if (documento) {
+                    const link = document.createElement('a');
+                    if (typeof documento === 'string') {
+                        link.href = documento;
+                        link.download = `evidencia_${Date.now()}.jpg`;
+                    } else if (documento.archivo) {
+                        link.href = documento.archivo;
+                        link.download = documento.nombre || `documento_${Date.now()}.pdf`;
+                    }
+                    link.click();
+                    mostrarToast('📥 Descargando documento...');
+                }
+            }
+
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files && e.target.files[0]) {
+                    cargarLeyesDesdeArchivo(e.target.files[0]);
+                }
+            });
+
+            resetBtn.addEventListener('click', () => {
+                fileInput.value = '';
+                leyesActual = null;
+                selects = {};
+                mapaArticulos = {};
+                const selectorContainer = document.getElementById('selectorContainer');
+                if (selectorContainer) selectorContainer.innerHTML = '';
+                const casoContentArea = document.getElementById('casoContentArea');
+                if (casoContentArea) {
+                    casoContentArea.innerHTML = '<div class="empty-state">📁 Carga un caso guardado o crea uno nuevo con "Crear mi Caso"</div>';
+                }
+                if (resetLexBtn) resetLexBtn.click();
+                fileInfo.innerText = 'Ningún caso cargado';
+                casoStats.innerHTML = '📚 Sin caso';
+                lexStats.innerHTML = '⚖️ Sin base legal';
+                document.getElementById('statusText').innerHTML = '⚖️ Listo para documentar tu caso';
+                mostrarToast('🔄 Todo reiniciado');
+            });
+
+            const loadCaseBtn = document.getElementById('loadCaseBtn');
+            if (loadCaseBtn) {
+                loadCaseBtn.addEventListener('click', () => {
+                    fileInput.click();
+                });
+            }
+
+            clearViewBtn.addEventListener('click', () => {
+                for (let catId in selects) {
+                    if (selects[catId]) selects[catId].value = '';
+                }
+                const casoContentArea = document.getElementById('casoContentArea');
+                if (casoContentArea) {
+                    casoContentArea.innerHTML = '<div class="empty-state">📜 Haz clic en un tema para ver los detalles de tu caso</div>';
+                }
+                mostrarToast('🧹 Vista limpiada');
+            });
+
+            function printAll() {
+                if (!leyesActual || !leyesActual.categorias) {
+                    mostrarToast('❌ Primero carga o crea un caso', 'error');
+                    return;
+                }
+                const ahora = new Date();
+                const fechaStr = ahora.toLocaleString('es-MX');
+                let html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Mi Caso - ${leyesActual.titulo || 'Documentación'}</title>
+            <style>body{font-family:Arial;max-width:900px;margin:0 auto;padding:30px} h1{color:#131b27} .articulo{margin:20px 0;padding:15px;border:1px solid #ccc;border-radius:12px} .imagen{max-width:150px;margin:5px} .footer{margin-top:50px;text-align:center;font-size:11px}</style></head>
+            <body><h1>📋 ${escapeHtml(leyesActual.titulo || 'Mi Caso')}</h1><p>Generado: ${fechaStr}</p>`;
+                leyesActual.categorias.forEach(cat => {
+                    html += `<h2>📂 ${escapeHtml(cat.nombre)}</h2>`;
+                    if (cat.opciones) {
+                        cat.opciones.forEach(op => {
+                            html += `<div class="articulo"><strong>📜 ${escapeHtml(op.texto)}</strong><br>${escapeHtml(op.contenido).replace(/\n/g, '<br>')}`;
+                            if (op.fotos && op.fotos.length) {
+                                html += `<br><strong>📸 Fotos:</strong><br>`;
+                                op.fotos.forEach(img => html += `<img src="${img}" class="imagen">`);
+                            }
+                            if (op.documentos && op.documentos.length) {
+                                html += `<br><strong>📄 Documentos:</strong><br>`;
+                                op.documentos.forEach(doc => {
+                                    if (doc.tipo === 'pdf') html += `<div>📎 ${doc.nombre}</div>`;
+                                    else html += `<img src="${doc.archivo}" class="imagen">`;
+                                });
+                            }
+                            if (op.aplica && op.aplica.length) {
+                                html += `<br><em>Afecta: ${op.aplica.join(', ')}</em>`;
+                            }
+                            html += `</div>`;
+                        });
+                    }
+                });
+                html += `<div class="footer">Documento generado por Nahomi Justice</div></body></html>`;
+                const ventana = window.open('', '_blank');
+                ventana.document.write(html);
+                ventana.document.close();
+                ventana.print();
+                mostrarToast('🖨️ Enviando a impresión...');
+            }
+
+            function exportarJSON() {
+                if (!leyesActual) {
+                    mostrarToast('❌ No hay caso para guardar', 'error');
+                    return;
+                }
+                const dataStr = JSON.stringify(leyesActual, null, 2);
+                const blob = new Blob([dataStr], {
+                    type: 'application/json'
+                });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `mi_caso_${Date.now()}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+                mostrarToast('💾 Copia guardada');
+            }
+
+            // ==========================================================
+            // EDITOR
+            // ==========================================================
+            let editorData = {
+                titulo: "Mi Caso Legal",
+                subtitulo: "Documentación de hechos y evidencias",
+                categorias: []
+            };
+
+            function mostrarPreviewFoto(base64, contenedor) {
+                const div = document.createElement('div');
+                div.className = 'preview-item';
+                const img = document.createElement('img');
+                img.src = base64;
+                img.className = 'preview-img';
+                const removeBtn = document.createElement('div');
+                removeBtn.className = 'remove-item';
+                removeBtn.innerText = '✖';
+                removeBtn.onclick = () => {
+                    const index = fotosBase64.indexOf(base64);
+                    if (index > -1) fotosBase64.splice(index, 1);
+                    div.remove();
+                    mostrarToast('📸 Foto eliminada');
+                };
+                div.appendChild(img);
+                div.appendChild(removeBtn);
+                contenedor.appendChild(div);
+            }
+
+            function mostrarPreviewDocumento(item, contenedor) {
+                const div = document.createElement('div');
+                div.className = 'preview-item';
+                if (item.tipo === 'pdf') {
+                    const pdfDiv = document.createElement('div');
+                    pdfDiv.className = 'preview-pdf';
+                    const nombreMostrar = item.nombre && item.nombre.length > 15 ?
+                        item.nombre.substring(0, 12) + '...' : (item.nombre || 'Documento PDF');
+                    pdfDiv.innerHTML = `📄<br>${escapeHtml(nombreMostrar)}`;
+                    pdfDiv.style.cursor = 'pointer';
+                    pdfDiv.onclick = (e) => {
+                        e.stopPropagation();
+                        if (item.archivo) {
+                            const ventana = window.open();
+                            ventana.document.write(`
+                        <html>
+                            <head><title>${escapeHtml(item.nombre || 'Documento PDF')}</title></head>
+                            <body style="margin:0;padding:0;">
+                                <embed src="${item.archivo}" width="100%" height="100%" type="application/pdf">
+                            </body>
+                        </html>
+                    `);
+                        }
+                    };
+                    const removeBtn = document.createElement('div');
+                    removeBtn.className = 'remove-item';
+                    removeBtn.innerText = '✖';
+                    removeBtn.onclick = (e) => {
+                        e.stopPropagation();
+                        const index = documentosBase64.findIndex(d => d.archivo === item.archivo);
+                        if (index > -1) documentosBase64.splice(index, 1);
+                        div.remove();
+                        mostrarToast('📄 Documento eliminado');
+                    };
+                    div.appendChild(pdfDiv);
+                    div.appendChild(removeBtn);
+                } else {
+                    const img = document.createElement('img');
+                    img.src = item.archivo;
+                    img.className = 'preview-img';
+                    img.onclick = () => mostrarImagenAmpliada(item.archivo);
+                    const removeBtn = document.createElement('div');
+                    removeBtn.className = 'remove-item';
+                    removeBtn.innerText = '✖';
+                    removeBtn.onclick = () => {
+                        const index = documentosBase64.findIndex(d => d.archivo === item.archivo);
+                        if (index > -1) documentosBase64.splice(index, 1);
+                        div.remove();
+                        mostrarToast('📄 Documento eliminado');
+                    };
+                    div.appendChild(img);
+                    div.appendChild(removeBtn);
+                }
+                contenedor.appendChild(div);
+            }
+
+            fotosInput.addEventListener('change', async(e) => {
+                const files = Array.from(e.target.files);
+                for (const file of files) {
+                    if (file.type.startsWith('image/')) {
+                        const base64 = await convertirArchivoABase64(file);
+                        fotosBase64.push(base64);
+                        mostrarPreviewFoto(base64, fotosPreview);
+                    }
+                }
+                fotosInput.value = '';
+                mostrarToast(`📸 ${files.length} foto(s) agregada(s)`);
+            });
+
+            docsInput.addEventListener('change', async(e) => {
+                const files = Array.from(e.target.files);
+                for (const file of files) {
+                    if (file.type.startsWith('image/')) {
+                        const base64 = await convertirArchivoABase64(file);
+                        const item = {
+                            tipo: 'imagen',
+                            archivo: base64,
+                            nombre: file.name
+                        };
+                        documentosBase64.push(item);
+                        mostrarPreviewDocumento(item, docsPreview);
+                    } else if (file.type === 'application/pdf') {
+                        const base64 = await convertirArchivoABase64(file);
+                        const item = {
+                            tipo: 'pdf',
+                            archivo: base64,
+                            nombre: file.name
+                        };
+                        documentosBase64.push(item);
+                        mostrarPreviewDocumento(item, docsPreview);
+                    }
+                }
+                docsInput.value = '';
+                mostrarToast(`📄 ${files.length} documento(s) agregado(s)`);
+            });
+
+            function limpiarPrevisualizaciones() {
+                fotosPreview.innerHTML = '';
+                docsPreview.innerHTML = '';
+                fotosBase64 = [];
+                documentosBase64 = [];
+            }
+
+            function actualizarPreviewJSON() {
+                const previewDiv = document.getElementById('jsonPreview');
+                previewDiv.innerHTML = `<pre style="margin:0;color:var(--text-primary);font-size:11px;white-space:pre-wrap;">${JSON.stringify(editorData, null, 2)}</pre>`;
+            }
+
+            function agregarArticulo() {
+                const tituloCaso = document.getElementById('editTituloCaso').value.trim();
+                const categoriaNombre = document.getElementById('editCategoriaNombre').value.trim();
+                const texto = document.getElementById('editTexto').value.trim();
+                const contenido = document.getElementById('editContenido').value.trim();
+                const aplicaCheckboxes = document.querySelectorAll('#editAplicaContainer input:checked');
+                const aplica = Array.from(aplicaCheckboxes).map(cb => cb.value);
+                if (!tituloCaso || !categoriaNombre || !texto || !contenido) {
+                    mostrarToast('❌ Por favor completa los campos con *', 'error');
+                    return;
+                }
+                editorData.titulo = tituloCaso;
+                const categoriaId = categoriaNombre.toLowerCase().replace(/\s/g, '_');
+                let categoria = editorData.categorias.find(c => c.id === categoriaId);
+                if (!categoria) {
+                    categoria = {
+                        id: categoriaId,
+                        nombre: categoriaNombre,
+                        opciones: []
+                    };
+                    editorData.categorias.push(categoria);
+                } else {
+                    categoria.nombre = categoriaNombre;
+                }
+                const nuevoArticulo = {
+                    valor: `hecho_${Date.now()}`,
+                    texto: texto,
+                    contenido: contenido,
+                    aplica: aplica
+                };
+                if (fotosBase64.length > 0) {
+                    nuevoArticulo.fotos = [...fotosBase64];
+                }
+                if (documentosBase64.length > 0) {
+                    nuevoArticulo.documentos = [...documentosBase64];
+                }
+                categoria.opciones.push(nuevoArticulo);
+                actualizarPreviewJSON();
+                document.getElementById('editTexto').value = '';
+                document.getElementById('editContenido').value = '';
+                document.querySelectorAll('#editAplicaContainer input').forEach(cb => cb.checked = false);
+                limpiarPrevisualizaciones();
+                mostrarToast('✅ Hecho agregado a tu caso');
+            }
+
+            function guardarYCargarCaso() {
+                if (editorData.categorias.length === 0) {
+                    mostrarToast('❌ Agrega al menos un hecho antes de guardar', 'error');
+                    return;
+                }
+                leyesActual = JSON.parse(JSON.stringify(editorData));
+                construirSelector(leyesActual);
+                document.getElementById('statusText').innerHTML = `⚖️ ${editorData.titulo}`;
+                cerrarLeyEditor();
+                mostrarToast('✅ ¡Tu caso ha sido guardado! Selecciona el tipo de problema para ver los detalles');
+            }
+
+            function limpiarTodoEditor() {
+                editorData = {
+                    titulo: "Mi Caso Legal",
+                    subtitulo: "Documentación de hechos y evidencias",
+                    categorias: []
+                };
+                actualizarPreviewJSON();
+                document.getElementById('editTituloCaso').value = '';
+                document.getElementById('editCategoriaNombre').value = '';
+                document.getElementById('editTexto').value = '';
+                document.getElementById('editContenido').value = '';
+                document.querySelectorAll('#editAplicaContainer input').forEach(cb => cb.checked = false);
+                limpiarPrevisualizaciones();
+                mostrarToast('🗑️ Todo ha sido limpiado');
+            }
+
+            function cargarEjemplo() {
+                editorData = {
+                    "titulo": "Demanda por despido injustificado, discriminación, subdeclaración salarial y violaciones a la LFT, LSS y CPF.",
+                    "subtitulo": "Documentación de hechos y evidencias",
+                    "categorias": [{
+                        "id": "laboral",
+                        "nombre": "Laboral",
+                        "opciones": [{
+                            "valor": "hecho_0000000000000",
+                            "texto": "1. Despido injustificado (Art. 47 LFT)",
+                            "contenido": "El 12/JUN/2025, fui despedido verbalmente sin causa legal, pretextando \"falta de trabajo\". No se me\nentregó liquidación ni finiquito o carta de despido, violando el Artículo 47 de la LFT.",
+                            "aplica": [
+                                "A mí mismo"
+                            ]
+                        }, {
+                            "valor": "hecho_0000000000001",
+                            "texto": "2. Intento de coacción para firmar renuncia (Art. 133 LFT)",
+                            "contenido": "La empresa me presionó para firmar una renuncia voluntaria, condicionando el pago de mi salario. Me\nnegué, pero alteraron registros para simular mi salida como \"Renuncia Voluntaria\" (Art. 247 CPF,\nfraude electrónico).",
+                            "aplica": [
+                                "A mí mismo"
+                            ]
+                        }, {
+                            "valor": "hecho_0000000000002",
+                            "texto": "3. Discriminación por enfermedad (Art. 3 LFT y Art 1 LFEPD)",
+                            "contenido": "Padezco cáncer: mieloma múltiple (adjunto resumen clínico).\nEl despido afecta mi acceso al IMSS y constituye discriminación por salud.",
+                            "aplica": [
+                                "A mí mismo"
+                            ]
+                        }, {
+                            "valor": "hecho_0000000000003",
+                            "texto": "4. Subdeclaración salarial (Art. 15 LSS y 5 LFT)",
+                            "contenido": "Mi salario real era de $670.80 MXN diarios, pero el patrón me registró ante el IMSS con $293.69 MXN\n(Adjunto comprobante de pago y estados de cuenta)",
+                            "aplica": [
+                                "A mí mismo"
+                            ]
+                        }, {
+                            "valor": "hecho_0000000000004",
+                            "texto": "5. Omisión de registro en el IMSS (Art. 15 LSS)",
+                            "contenido": "Estuve 285 días sin seguro (del 26/MAY/2021 al 07/MAR/2022), lo que afectó mis derechos médicos.\n(Constancia de semanas cotizadas y registro del sistema patronal MIG con detalle al inicio y a fin de\nlabores).",
+                            "aplica": [
+                                "A mí mismo"
+                            ]
+                        }, {
+                            "valor": "hecho_0000000000005",
+                            "texto": "6. Irregularidades en pagos (Art. 110 LFT)",
+                            "contenido": "En mayo 2025, hubo retrasos en mi salario con excusas de \"problemas con el banco Santander\"\nEsto constituye hostigamiento laboral indirecto y sabotaje económico. (Art 3 LFT y 47‐Bis LTF) ya que\nel banco negó falla técnica.",
+                            "aplica": [
+                                "A mí mismo"
+                            ]
+                        }, {
+                            "valor": "hecho_0000000000006",
+                            "texto": "7. Registros patronales irregulares y omisión en el IMSS (Art. 15‐A LSS y 1004 LFT)",
+                            "contenido": "Durante mi empleo, el patrón me registró bajo 4 diferentes registros patronales (evidencia adjunta de\nConstancia de Semanas Cotizadas), lo que imposibilitó mi acceso a prestaciones como créditos\nINFONAVIT o seguro de enfermedades.",
+                            "aplica": [
+                                "A mí mismo"
+                            ]
+                        }, {
+                            "valor": "hecho_0000000000007",
+                            "texto": "8. Daños derivados de las omisiones (Art. 487 LFT)",
+                            "contenido": "La falta de registro continuo me generó:\nPérdida de derechos médicos (consultas, medicinas y estudios no cubiertos).\n\nImposibilidad de acceder a incapacidades o pensiones.\nPerjuicio económico al tener que pagar tratamientos de mi bolsillo.",
+                            "aplica": [
+                                "A mí mismo"
+                            ]
+                        }, {
+                            "valor": "hecho_0000000000008",
+                            "texto": "9. Falta de documentación laborar (Art 25 y 980 de la LFT)",
+                            "contenido": "Dado que el patrón no me ha entregado mis recibos de nomina, ni mi contrato y ante la necesidad\neconómica. Adjunto documento de petición por escrito, en caso de incumplimiento se declare al patrón en mora y apliquen las sanciones del artículo.",
+                            "aplica": [
+                                "A mí mismo"
+                            ]
+                        }]
+                    }]
+                };
+                actualizarPreviewJSON();
+                document.getElementById('editTituloCaso').value = editorData.titulo;
+                document.getElementById('editCategoriaNombre').value = "Laboral";
+                mostrarToast('📋 Ejemplo cargado, puedes editarlo');
+            }
+
+            function exportarJSONEditor() {
+                if (editorData.categorias.length === 0) {
+                    mostrarToast('❌ No hay datos para guardar', 'error');
+                    return;
+                }
+                const dataStr = JSON.stringify(editorData, null, 2);
+                const blob = new Blob([dataStr], {
+                    type: 'application/json'
+                });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `borrador_caso_${Date.now()}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+                mostrarToast('💾 Borrador guardado');
+            }
+
+            function abrirLeyEditor() {
+                const overlay = document.getElementById('leyEditorOverlay');
+                if (overlay) overlay.classList.add('active');
+                actualizarPreviewJSON();
+            }
+
+            function cerrarLeyEditor() {
+                const overlay = document.getElementById('leyEditorOverlay');
+                if (overlay) overlay.classList.remove('active');
+            }
+
+            // ==========================================================
+            // MODO CLARO / OSCURO
+            // ==========================================================
+
+            function initTheme() {
+                const savedTheme = localStorage.getItem('nahomiTheme');
+                if (savedTheme === 'light') {
+                    document.body.classList.add('light-mode');
+                    updateThemeButton('light');
+                } else if (savedTheme === 'dark') {
+                    document.body.classList.remove('light-mode');
+                    updateThemeButton('dark');
+                } else {
+                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if (!prefersDark) {
+                        document.body.classList.add('light-mode');
+                        updateThemeButton('light');
+                    } else {
+                        updateThemeButton('dark');
+                    }
+                }
+            }
+
+            function updateThemeButton(theme) {
+                const themeBtn = document.getElementById('themeToggle');
+                if (!themeBtn) return;
+                const iconSpan = themeBtn.querySelector('.icon');
+                const textSpan = themeBtn.querySelector('span:last-child');
+                if (theme === 'light') {
+                    iconSpan.innerHTML = '☀️';
+                    //                textSpan.innerText = 'Modo Claro';
+                } else {
+                    iconSpan.innerHTML = '🌙';
+                    //                textSpan.innerText = 'Modo Oscuro';
+                }
+            }
+
+            function toggleTheme() {
+                const isLightMode = document.body.classList.contains('light-mode');
+                if (isLightMode) {
+                    document.body.classList.remove('light-mode');
+                    localStorage.setItem('nahomiTheme', 'dark');
+                    updateThemeButton('dark');
+                    mostrarToast('🌙 Modo oscuro activado');
+                } else {
+                    document.body.classList.add('light-mode');
+                    localStorage.setItem('nahomiTheme', 'light');
+                    updateThemeButton('light');
+                    mostrarToast('☀️ Modo claro activado');
+                }
+            }
+
+            const themeToggleBtn = document.getElementById('themeToggle');
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', toggleTheme);
+            }
+            initTheme();
+
+            // Event listeners
+            document.getElementById('btnLeyEditor').addEventListener('click', abrirLeyEditor);
+            document.getElementById('closeEditorBtn').addEventListener('click', cerrarLeyEditor);
+            document.getElementById('leyEditorOverlay').addEventListener('click', (e) => {
+                if (e.target === e.currentTarget) cerrarLeyEditor();
+            });
+            document.getElementById('addArticuloBtn').addEventListener('click', agregarArticulo);
+            document.getElementById('saveCasoBtn').addEventListener('click', guardarYCargarCaso);
+            document.getElementById('previewJsonBtn').addEventListener('click', () => {
+                actualizarPreviewJSON();
+                mostrarToast('👁️ Resumen actualizado');
+            });
+            document.getElementById('clearEditorBtn').addEventListener('click', limpiarTodoEditor);
+            document.getElementById('exportJsonPreviewBtn').addEventListener('click', exportarJSONEditor);
+            document.getElementById('loadExampleBtn').addEventListener('click', cargarEjemplo);
+            document.getElementById('printAllBtn').addEventListener('click', printAll);
+            document.getElementById('exportJsonBtn').addEventListener('click', exportarJSON);
+            document.getElementById('helpBtn').addEventListener('click', () => mostrarToast('📖 Ayuda: Crea tu caso, agrega fotos y documentos, luego guarda e imprime'));
+            document.getElementById('imageModal').addEventListener('click', function() {
+                this.classList.remove('active');
+            });
+
+            actualizarPreviewJSON();
+
+            // ==========================================================
+            // LEXNEXUS - INTEGRADO EN NAHOMI JUSTICE
+            // ==========================================================
+
+            let baseLegalActual = null;
+            let situacionSeleccionada = null;
+
+            const lexJsonInput = document.getElementById('lexJsonInput');
+            const lexFileInfo = document.getElementById('lexFileInfo');
+            const situacionesList = document.getElementById('situacionesList');
+            const resetLexBtn = document.getElementById('resetLexBtn');
+            const leyesContent = document.getElementById('leyesContent');
+            const miCasoContent = document.getElementById('miCasoContent');
+            const tabMiCaso = document.getElementById('tabMiCaso');
+            const tabLeyes = document.getElementById('tabLeyes');
+
+            function construirListaSituaciones(baseLegal) {
+                situacionesList.innerHTML = '';
+                if (!baseLegal.situaciones || !Array.isArray(baseLegal.situaciones)) {
+                    situacionesList.innerHTML = '<div class="error-msg">❌ El JSON debe tener una propiedad "situaciones" como array</div>';
+                    return;
+                }
+                if (baseLegal.situaciones.length === 0) {
+                    situacionesList.innerHTML = '<div class="empty-state">📭 No hay situaciones definidas en la base legal</div>';
+                    return;
+                }
+                baseLegal.situaciones.forEach((sit, index) => {
+                            const div = document.createElement('div');
+                            div.className = 'situacion-item';
+                            div.setAttribute('data-id', index);
+                            const totalArticulos = sit.articulos ? sit.articulos.length : 0;
+                            div.innerHTML = `
+                    <div class="situacion-nombre">🔍 ${escapeHtml(sit.nombre)}</div>
+                    ${sit.descripcion ? `<div class="situacion-descripcion">${escapeHtml(sit.descripcion.substring(0, 100))}${sit.descripcion.length > 100 ? '...' : ''}</div>` : ''}
+                    <div class="situacion-articulos">📚 ${totalArticulos} artículo(s) vinculado(s)</div>
+                `;
+                div.addEventListener('click', () => {
+                    document.querySelectorAll('.situacion-item').forEach(item => {
+                        item.classList.remove('selected');
+                    });
+                    div.classList.add('selected');
+                    situacionSeleccionada = sit;
+                    mostrarArticulosLex(sit);
+                    mostrarToast(`📖 Mostrando ${sit.articulos ? sit.articulos.length : 0} artículo(s) para: ${sit.nombre}`);
+                    tabLeyes.click();
+                });
+                situacionesList.appendChild(div);
+            });
+            const totalSituaciones = baseLegal.situaciones.length;
+            const totalArticulos = baseLegal.situaciones.reduce((sum, sit) => sum + (sit.articulos ? sit.articulos.length : 0), 0);
+            lexStats.innerHTML = `📚 ${totalSituaciones} situaciones | ${totalArticulos} artículos legales`;
+        }
+
+        function mostrarArticulosLex(situacion) {
+            if (!situacion) {
+                leyesContent.innerHTML = '<div class="empty-state">⚖️ Selecciona una situación legal para ver los artículos aplicables</div>';
+                return;
+            }
+            if (!situacion.articulos || situacion.articulos.length === 0) {
+                leyesContent.innerHTML = `<div class="empty-state">📜 No hay artículos registrados para "${escapeHtml(situacion.nombre)}"</div>`;
+                return;
+            }
+            let html = `
+                <div class="articulo-card" style="background: var(--bg-card); margin-bottom: 24px; border-left: 4px solid var(--accent-color);">
+                    <div class="articulo-titulo" style="font-size: 22px;">⚖️ ${escapeHtml(situacion.nombre)}</div>
+                    ${situacion.descripcion ? `<div class="articulo-contenido">${escapeHtml(situacion.descripcion)}</div>` : ''}
+                    <div class="badge" style="display: inline-block; margin-top: 12px; background: var(--accent-color); color: #0f0f18; padding: 4px 12px; border-radius: 20px;">📋 ${situacion.articulos.length} artículo(s) aplicable(s)</div>
+                </div>
+            `;
+            situacion.articulos.forEach((art, index) => {
+                html += `
+                <div class="articulo-card">
+                    <div class="articulo-titulo">📜 ${escapeHtml(art.numero || `Artículo ${index + 1}`)}</div>
+                    <div class="articulo-contenido">${escapeHtml(art.contenido || art.texto || 'Contenido no disponible').replace(/\n/g, '<br>')}</div>
+                    ${art.penalidad ? `<div class="articulo-penalidad" style="margin-top: 15px; padding: 12px; background: var(--bg-secondary); border-radius: 10px; color: var(--warning-color);">⚖️ PENALIDAD: ${escapeHtml(art.penalidad)}</div>` : ''}
+                    ${art.aplica ? `<div class="articulo-aplica" style="margin-top: 12px; padding: 8px 12px; background: var(--bg-secondary); border-radius: 8px; color: var(--accent-color);">🏷️ APLICA PARA: ${art.aplica.join(', ')}</div>` : ''}
+                </div>`;
+            });
+            leyesContent.innerHTML = html;
+        }
+
+        function cargarBaseLegalDesdeArchivo(file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const jsonData = JSON.parse(e.target.result);
+                    if (!jsonData.situaciones || !Array.isArray(jsonData.situaciones)) {
+                        throw new Error('El JSON debe tener una propiedad "situaciones" como array');
+                    }
+                    baseLegalActual = jsonData;
+                    construirListaSituaciones(baseLegalActual);
+                    lexFileInfo.innerText = `📄 Cargado: ${file.name}`;
+                    mostrarToast(`✅ Base legal cargada: ${jsonData.situaciones.length} situaciones disponibles`);
+                } catch (error) {
+                    lexFileInfo.innerText = `❌ Error: ${error.message}`;
+                    mostrarToast('❌ Error al cargar la base legal', 'error');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        resetLexBtn.addEventListener('click', () => {
+            lexJsonInput.value = '';
+            baseLegalActual = null;
+            situacionSeleccionada = null;
+            situacionesList.innerHTML = '<div class="empty-state">📁 Carga un archivo JSON con la base legal para comenzar</div>';
+            leyesContent.innerHTML = '<div class="empty-state">⚖️ Selecciona una situación de la lista izquierda<br><br>Para ver los artículos legales que aplican a tu caso</div>';
+            lexFileInfo.innerText = 'Ninguna base legal cargada';
+            lexStats.innerHTML = '⚖️ Sin base legal';
+            mostrarToast('🔄 Consulta legal reiniciada');
+        });
+
+        tabMiCaso.addEventListener('click', () => {
+            tabMiCaso.classList.add('active');
+            tabLeyes.classList.remove('active');
+            miCasoContent.style.display = 'block';
+            leyesContent.style.display = 'none';
+        });
+
+        tabLeyes.addEventListener('click', () => {
+            tabLeyes.classList.add('active');
+            tabMiCaso.classList.remove('active');
+            miCasoContent.style.display = 'none';
+            leyesContent.style.display = 'block';
+        });
+
+        lexJsonInput.addEventListener('change', (e) => {
+            if (e.target.files && e.target.files[0]) {
+                cargarBaseLegalDesdeArchivo(e.target.files[0]);
+            }
+        });
+        </script>
+</body>
+
+</html>
