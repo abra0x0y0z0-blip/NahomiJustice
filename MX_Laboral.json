@@ -1,0 +1,230 @@
+{
+  "titulo": "Derechos Laborales en México",
+  "subtitulo": "Leyes que protegen tu trabajo - LFT (Ley Federal del Trabajo)",
+  "autor": "NahomiJustice - Derechos laborales",
+  "version": "1.0",
+  "color_theme": "azul_dorado",
+  "situaciones": [
+    {
+      "nombre": "Acoso Laboral",
+      "descripcion": "Molestias constantes, humillaciones, gritos, aislamiento o discriminación en tu trabajo",
+      "palabras_clave": ["acoso", "mobbing", "hostigamiento", "bullying", "humillación"],
+      "articulos": [
+        {
+          "numero": "Artículo 3 Bis - LFT",
+          "contenido": "El patrón debe prevenir y sancionar el acoso laboral y el hostigamiento sexual. Se consideran actos de acoso: la violencia física o psicológica, el aislamiento, la intimidación y el hostigamiento.",
+          "penalidad": "Multa de 250 a 5000 UMAS (Unidades de Medida y Actualización)",
+          "aplica": ["Trabajadores", "Empleados"]
+        },
+        {
+          "numero": "Artículo 47 - LFT",
+          "contenido": "El acoso laboral por parte del patrón o sus superiores es causa de rescisión de la relación de trabajo SIN responsabilidad para el trabajador.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 51 - LFT",
+          "contenido": "El trabajador puede dar por terminada la relación de trabajo por actos de acoso o violencia del patrón, conservando derecho a indemnización.",
+          "penalidad": "Indemnización de 3 meses de salario + 20 días por año trabajado",
+          "aplica": ["Trabajadores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Falta de Inscripción al Seguro Social (IMSS)",
+      "descripcion": "Tu patrón no te ha dado de alta en el IMSS, no tienes servicio médico, ni guardería, ni incapacidades",
+      "palabras_clave": ["IMSS", "inscripción", "seguro", "social", "alta", "afiliación"],
+      "articulos": [
+        {
+          "numero": "Artículo 15 - Ley del Seguro Social",
+          "contenido": "Es obligación del patrón inscribir a sus trabajadores ante el Instituto Mexicano del Seguro Social (IMSS) desde el primer día de labores.",
+          "penalidad": "Multa de 20 a 500 veces el salario mínimo + recargos",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 51 - LFT",
+          "contenido": "La falta de inscripción al IMSS es causa de rescisión de la relación de trabajo SIN responsabilidad para el trabajador.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 1002 - LFT",
+          "contenido": "El trabajador puede demandar el reconocimiento de su relación laboral y el pago de las cuotas patronales no enteradas al IMSS.",
+          "aplica": ["Trabajadores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Trabajo Sin Contrato",
+      "descripcion": "Nunca te dieron un contrato escrito o no sabes cuáles son tus condiciones laborales",
+      "palabras_clave": ["contrato", "escrito", "condiciones", "formal", "documento"],
+      "articulos": [
+        {
+          "numero": "Artículo 25 - LFT",
+          "contenido": "El contrato de trabajo debe constar por escrito en dos ejemplares, uno para cada parte. Debe contener: nombre del trabajador, nombre del patrón, lugar de trabajo, jornada, salario, fecha de inicio, etc.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 27 - LFT",
+          "contenido": "Si el patrón no da un contrato por escrito, se presume que existen las condiciones de trabajo que el trabajador reclame como ciertas.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 804 - LFT",
+          "contenido": "La falta de contrato escrito no afecta la existencia de la relación laboral. El trabajador puede probarla con cualquier medio (testigos, recibos, WhatsApp, etc.).",
+          "aplica": ["Trabajadores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Deuda de Salarios (Semanas Atrasadas)",
+      "descripcion": "Te deben varias semanas de sueldo, no te han pagado a tiempo",
+      "palabras_clave": ["deuda", "salario", "atrasado", "semana", "pago", "adeudo"],
+      "articulos": [
+        {
+          "numero": "Artículo 86 - LFT",
+          "contenido": "Los salarios deben pagarse en el lugar donde el trabajador presta sus servicios, en moneda de curso legal, y dentro del plazo establecido (máximo una semana).",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 87 - LFT",
+          "contenido": "El pago debe ser directo al trabajador. Si se entrega a un tercero, el patrón sigue siendo responsable.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 47 - LFT",
+          "contenido": "La falta de pago del salario es causa de rescisión de la relación de trabajo SIN responsabilidad para el trabajador.",
+          "penalidad": "Indemnización de 3 meses de salario + 20 días por año + salarios adeudados",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 48 - LFT",
+          "contenido": "El trabajador puede optar por la reinstalación o la indemnización.",
+          "aplica": ["Trabajadores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Deducciones Inapropiadas al Salario",
+      "descripcion": "Te descuentan dinero de tu sueldo que no está permitido por ley (uniforme, herramientas, multas, etc.)",
+      "palabras_clave": ["deducciones", "descuentos", "salario", "inapropiadas", "ilegales"],
+      "articulos": [
+        {
+          "numero": "Artículo 97 - LFT",
+          "contenido": "Las deducciones al salario solo están permitidas en los casos siguientes:\n- Pago de renta de casa (si el patrón la proporciona)\n- Pago de abonos a préstamos autorizados\n- Pensiones alimenticias (por orden judicial)\n- Cuotas sindicales (con autorización del trabajador)",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 110 - LFT",
+          "contenido": "Queda prohibido descontar por multas, por rotura de herramientas, por pérdida de materiales, o por cualquier otro concepto no autorizado por la ley.",
+          "penalidad": "Multa de 50 a 500 UMAS por cada infracción",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 122 - LFT",
+          "contenido": "Los descuentos por préstamos no pueden exceder el 30% del salario mensual.",
+          "aplica": ["Trabajadores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Despido Injustificado",
+      "descripcion": "Te corrieron sin causa legal, sin pagarte tu liquidación o sin aviso previo",
+      "palabras_clave": ["despido", "corrido", "liquidación", "finiquito", "injustificado"],
+      "articulos": [
+        {
+          "numero": "Artículo 47 - LFT",
+          "contenido": "Son causas JUSTIFICADAS de despido:\nI. Engaños en los documentos;\nII. Violencia contra compañeros o patrón;\nIII. Daño intencional a bienes de la empresa;\nIV. Conducta inmoral en el trabajo;\nV. Falta de asistencia injustificada;\nVI. Desobediencia grave;\nVII. Revelación de secretos.\nSi NO es por estas causas, el despido es INJUSTIFICADO.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 48 - LFT",
+          "contenido": "Si el despido es injustificado, el trabajador puede optar por:\n- La REINSTALACIÓN en su puesto, o\n- La INDEMNIZACIÓN de 3 meses de salario + 20 días por año trabajado + salarios caídos.",
+          "penalidad": "3 meses + 20 días por año + salarios vencidos",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 50 - LFT",
+          "contenido": "Si el trabajador opta por la reinstalación y el patrón se niega, deberá pagar además los salarios caídos desde la fecha del despido hasta que se cumpla la sentencia.",
+          "aplica": ["Trabajadores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Despido por Enfermedad",
+      "descripcion": "Te corrieron porque te enfermaste o tuviste un accidente",
+      "palabras_clave": ["enfermedad", "accidente", "incapacidad", "discapacidad", "enfermo"],
+      "articulos": [
+        {
+          "numero": "Artículo 51 - LFT",
+          "contenido": "No es causa de despido la enfermedad del trabajador. Si el patrón despide por esta causa, es INJUSTIFICADO.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 53 - LFT",
+          "contenido": "El trabajador con enfermedad no contagiosa tiene derecho a conservar su empleo durante 6 meses de incapacidad. Si la incapacidad es mayor, el patrón puede rescindir el contrato PERO debe pagar indemnización.",
+          "penalidad": "Indemnización de 3 meses + 20 días por año",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 54 - LFT",
+          "contenido": "Si la enfermedad fue causada por el trabajo (accidente laboral o enfermedad profesional), el patrón NO puede despedir al trabajador.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 57 - LFT",
+          "contenido": "Si el patrón despide durante una incapacidad por riesgo de trabajo, el trabajador tiene derecho a la reinstalación Y al pago de los salarios caídos.",
+          "aplica": ["Trabajadores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Despido Justificado No Pagado",
+      "descripcion": "Te corrieron con causa, pero no te pagaron lo que te corresponde (parte proporcional de aguinaldo, vacaciones, prima vacacional)",
+      "palabras_clave": ["justificado", "finiquito", "partes proporcionales", "aguinaldo", "vacaciones"],
+      "articulos": [
+        {
+          "numero": "Artículo 87 - LFT",
+          "contenido": "El trabajador tiene derecho a un finiquito que incluya: parte proporcional de aguinaldo, vacaciones no tomadas y prima vacacional, aunque el despido haya sido justificado.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 135 - LFT",
+          "contenido": "Las vacaciones no disfrutadas deben pagarse en el finiquito.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 76 - LFT",
+          "contenido": "El aguinaldo anual mínimo es de 15 días de salario. Debe pagarse antes del 20 de diciembre. La parte proporcional debe pagarse en el finiquito.",
+          "aplica": ["Trabajadores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Subdeclaración Fiscal / Pago Menor al Real",
+      "descripcion": "Tu patrón te paga una parte por nómina y otra en efectivo (o no declarada), cobras menos de lo que realmente ganas",
+      "palabras_clave": ["subdeclaración", "salario mixto", "simulación", "ISR", "nómina", "efectivo"],
+      "articulos": [
+        {
+          "numero": "Artículo 83 - LFT",
+          "contenido": "El salario debe ser remunerador y nunca menor al mínimo. El patrón está obligado a registrar el salario real ante el IMSS y el SAT.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 32 - LFT",
+          "contenido": "Es obligación del patrón expedir y entregar recibos de pago que reflejen el salario REAL percibido.",
+          "penalidad": "Multa de 50 a 500 UMAS",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 84 - LFT",
+          "contenido": "Cuando el salario se integra por pagos en dinero y en especie, el valor de la especie no puede exceder el 20% del salario total.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 1002 - LFT",
+          "contenido": "El trabajador puede demandar que se reconozca su salario REAL para efectos de indemnizaciones, prestaciones y jubilación.",
+          "aplica": ["Trabajadores"]
+        }
+      ]
+    }
+  ]
+}

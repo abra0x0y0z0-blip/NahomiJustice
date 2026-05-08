@@ -1,0 +1,397 @@
+{
+  "titulo": "Derechos en Salud - México",
+  "subtitulo": "Tu salud es tu derecho. Conoce las leyes que te protegen en hospitales, clínicas y consultorios.",
+  "autor": "NahomiJustice - Justicia en Salud",
+  "version": "1.0",
+  "color_theme": "verde_salud",
+  "situaciones": [
+    {
+      "nombre": "Negación de Servicios Médicos (IMSS/ISSSTE)",
+      "descripcion": "El hospital o clínica del IMSS, ISSSTE, Seguro Popular, bienstar no te quiso atender",
+      "palabras_clave": ["IMSS", "ISSSTE", "negación", "urgencias", "consulta", "rechazo"],
+      "articulos": [
+        {
+          "numero": "Artículo 4 - Constitución Política",
+          "contenido": "Toda persona tiene derecho a la protección de la salud. La ley definirá las bases y modalidades para el acceso a los servicios de salud.",
+          "aplica": ["Todos los mexicanos", "Residentes"]
+        },
+        {
+          "numero": "Artículo 40 - Ley General de Salud",
+          "contenido": "Los servicios de salud son universales y obligatorios. Ninguna persona puede ser discriminada o excluida por falta de recursos, condición social o enfermedad.",
+          "penalidad": "Multa de 200 a 1000 UMAS + suspensión del responsable",
+          "aplica": ["Pacientes", "Usuarios del sistema de salud"]
+        },
+        {
+          "numero": "Artículo 77 - Ley del Seguro Social",
+          "contenido": "El IMSS está obligado a proporcionar servicios médicos, quirúrgicos, farmacéuticos y hospitalarios a sus derechohabientes.",
+          "aplica": ["Trabajadores", "Familiares"]
+        },
+        {
+          "numero": "Artículo 116 - Ley General de Salud",
+          "contenido": "En caso de urgencia, ningún hospital público o privado puede negar la atención médica. Deben estabilizar al paciente antes de cualquier exigencia administrativa o de pago.",
+          "penalidad": "Multa de 500 a 2000 UMAS + clausura temporal",
+          "aplica": ["Todos en situación de urgencia"]
+        }
+      ]
+    },
+    {
+      "nombre": "Negligencia Médica (Malapraxis)",
+      "descripcion": "Un médico o personal de salud te atendió mal y esto causó daño a tu salud",
+      "palabras_clave": ["negligencia", "médica", "error", "cirugía", "diagnóstico", "malapraxis", "complicación"],
+      "articulos": [
+        {
+          "numero": "Artículo 228 - Código Penal Federal",
+          "contenido": "El profesional de la salud que cause daño a la salud o la vida de un paciente por negligencia, impericia o falta de cuidado será castigado.",
+          "penalidad": "Prisión de 1 a 8 años + suspensión profesional de 2 a 5 años",
+          "aplica": ["Pacientes", "Familiares"]
+        },
+        {
+          "numero": "Artículo 1916 - Código Civil Federal",
+          "contenido": "La persona que cause daño a otra (físico, psicológico o moral) está obligada a repararlo con dinero (indemnización).",
+          "penalidad": "Indemnización económica",
+          "aplica": ["Pacientes afectados"]
+        },
+        {
+          "numero": "Artículo 1917 - Código Civil Federal",
+          "contenido": "La reparación del daño incluye: gastos médicos, medicamentos, rehabilitación, pérdida de ingresos y daño moral.",
+          "aplica": ["Pacientes", "Familiares"]
+        },
+        {
+          "numero": "Artículo 180 - Ley General de Salud",
+          "contenido": "Los médicos tienen la obligación de informar al paciente sobre los riesgos de cualquier procedimiento (consentimiento informado).",
+          "aplica": ["Pacientes"]
+        }
+      ]
+    },
+    {
+      "nombre": "Mala Praxis en Cirugía",
+      "descripcion": "Te operaron y algo salió mal (instrumentos olvidados, infección, órgano dañado)",
+      "palabras_clave": ["cirugía", "operación", "error", "instrumentos", "infección", "complicación posoperatoria"],
+      "articulos": [
+        {
+          "numero": "Artículo 229 - Código Penal Federal",
+          "contenido": "Si durante una cirugía el médico causa daño por negligencia o falta de cuidado, la pena se agrava.",
+          "penalidad": "Prisión de 2 a 10 años + suspensión profesional",
+          "aplica": ["Pacientes quirúrgicos"]
+        },
+        {
+          "numero": "Artículo 46 - Ley General de Salud",
+          "contenido": "Los hospitales y clínicas deben contar con equipo adecuado y protocolos de seguridad para cirugías.",
+          "aplica": ["Pacientes"]
+        }
+      ]
+    },
+    {
+      "nombre": "Error en Diagnóstico",
+      "descripcion": "El médico te diagnosticó mal y eso retrasó tu tratamiento o empeoró tu enfermedad",
+      "palabras_clave": ["diagnóstico", "error", "equivocación", "retraso", "enfermedad", "cáncer", "infección"],
+      "articulos": [
+        {
+          "numero": "Artículo 230 - Código Penal Federal",
+          "contenido": "El profesional que por negligencia emite un diagnóstico erróneo que causa daño a la salud será responsable.",
+          "penalidad": "Prisión de 1 a 5 años + multa",
+          "aplica": ["Pacientes"]
+        },
+        {
+          "numero": "Artículo 181 - Ley General de Salud",
+          "contenido": "El médico debe utilizar los medios disponibles para llegar a un diagnóstico certero (estudios, análisis, especialistas).",
+          "aplica": ["Pacientes"]
+        }
+      ]
+    },
+    {
+      "nombre": "Discriminación Médica",
+      "descripcion": "Te trataron mal, te ignoraron o no te quisieron atender por tu origen, preferencia sexual, enfermedad o condición",
+      "palabras_clave": ["discriminación", "VIH", "SIDA", "LGBT", "indígena", "obesidad", "salud mental"],
+      "articulos": [
+        {
+          "numero": "Artículo 1 - Constitución Política",
+          "contenido": "Queda prohibida toda discriminación en servicios de salud por origen étnico, género, edad, discapacidad, condición social, preferencia sexual, estado de salud o religión.",
+          "aplica": ["Todos los pacientes"]
+        },
+        {
+          "numero": "Artículo 9 - Ley Federal para Prevenir la Discriminación",
+          "contenido": "Se consideran actos de discriminación en salud: negar atención, dar atención de menor calidad, rechazar por VIH/sida, o segregar por orientación sexual.",
+          "penalidad": "Multa de 1000 a 5000 UMAS + capacitación obligatoria",
+          "aplica": ["Pacientes discriminados"]
+        },
+        {
+          "numero": "Artículo 32 - Ley General de Salud",
+          "contenido": "Las personas con VIH/SIDA tienen derecho a recibir atención médica sin discriminación y con confidencialidad.",
+          "aplica": ["Personas con VIH/SIDA"]
+        }
+      ]
+    },
+    {
+      "nombre": "Falta de Medicamentos",
+      "descripcion": "El hospital o farmacia del IMSS no tiene los medicamentos que necesitas",
+      "palabras_clave": ["medicamentos", "farmacia", "desabasto", "IMSS", "receta", "tratamiento"],
+      "articulos": [
+        {
+          "numero": "Artículo 77 - Ley General de Salud",
+          "contenido": "Las instituciones de salud están obligadas a suministrar los medicamentos necesarios para el tratamiento de los pacientes.",
+          "aplica": ["Derechohabientes", "Pacientes"]
+        },
+        {
+          "numero": "Artículo 224 - Ley General de Salud",
+          "contenido": "Si no hay medicamentos en la institución, deben proporcionar una alternativa terapéutica o gestionar la compra inmediata.",
+          "aplica": ["Pacientes"]
+        },
+        {
+          "numero": "Artículo 40 - Ley del Seguro Social",
+          "contenido": "El IMSS debe garantizar el abasto de medicamentos en todas sus unidades médicas.",
+          "aplica": ["Trabajadores", "Familiares"]
+        }
+      ]
+    },
+    {
+      "nombre": "Violación del Consentimiento Informado",
+      "descripcion": "Te hicieron un procedimiento médico sin explicarte los riesgos o sin tu permiso",
+      "palabras_clave": ["consentimiento", "informado", "permiso", "autorización", "cirugía", "tratamiento"],
+      "articulos": [
+        {
+          "numero": "Artículo 180 - Ley General de Salud",
+          "contenido": "El médico tiene la obligación de informar al paciente, de manera clara y completa, sobre: diagnóstico, pronóstico, tratamiento, riesgos y alternativas. El paciente debe firmar su consentimiento por escrito.",
+          "aplica": ["Pacientes"]
+        },
+        {
+          "numero": "Artículo 181 - Ley General de Salud",
+          "contenido": "El consentimiento informado es obligatorio para: cirugías, procedimientos invasivos, tratamientos experimentales y estudios con radiación.",
+          "aplica": ["Pacientes"]
+        },
+        {
+          "numero": "Artículo 182 - Ley General de Salud",
+          "contenido": "El paciente puede revocar su consentimiento en cualquier momento antes del procedimiento.",
+          "aplica": ["Pacientes"]
+        },
+        {
+          "numero": "Artículo 184 - Ley General de Salud",
+          "contenido": "En casos de urgencia que pongan en peligro la vida, no se requiere consentimiento informado para salvar al paciente.",
+          "aplica": ["Urgencias"]
+        }
+      ]
+    },
+    {
+      "nombre": "Acoso u Hostigamiento en Consulta",
+      "descripcion": "Un médico o enfermero te hizo comentarios o tocamientos inapropiados durante la consulta",
+      "palabras_clave": ["acoso", "hostigamiento", "tocamientos", "comentarios", "médico", "consulta"],
+      "articulos": [
+        {
+          "numero": "Artículo 259 - Código Penal Federal",
+          "contenido": "El hostigamiento sexual cometido por un profesional de la salud contra su paciente se castiga con prisión.",
+          "penalidad": "Prisión de 2 a 8 años + suspensión profesional",
+          "aplica": ["Pacientes"]
+        },
+        {
+          "numero": "Artículo 260 - Código Penal Federal",
+          "contenido": "El abuso de autoridad médica para obtener tocamientos o actos sexuales se considera delito grave.",
+          "penalidad": "Prisión de 4 a 12 años",
+          "aplica": ["Pacientes"]
+        },
+        {
+          "numero": "Artículo 40 - Ley General de Salud (Código de Conducta)",
+          "contenido": "El personal médico debe mantener una conducta profesional y respetuosa con los pacientes.",
+          "aplica": ["Pacientes"]
+        }
+      ]
+    },
+    {
+      "nombre": "Vulneración de Confidencialidad (Secreto Médico)",
+      "descripcion": "El médico o el hospital divulgaron tu información médica sin tu permiso",
+      "palabras_clave": ["secreto", "confidencialidad", "información", "expediente", "divulgar", "privacidad"],
+      "articulos": [
+        {
+          "numero": "Artículo 206 - Código Penal Federal",
+          "contenido": "El profesional de la salud que revele secretos o información confidencial del paciente será castigado.",
+          "penalidad": "Prisión de 6 meses a 3 años + multa",
+          "aplica": ["Pacientes"]
+        },
+        {
+          "numero": "Artículo 207 - Código Penal Federal",
+          "contenido": "La violación del secreto médico se agrava si causa daño moral o económico al paciente.",
+          "penalidad": "Prisión de 2 a 6 años",
+          "aplica": ["Pacientes"]
+        },
+        {
+          "numero": "Artículo 16 - Constitución Política",
+          "contenido": "Toda persona tiene derecho a la protección de sus datos personales, incluyendo los médicos.",
+          "aplica": ["Todos los pacientes"]
+        }
+      ]
+    },
+    {
+      "nombre": "Mala Atención en Urgencias",
+      "descripcion": "Llegaste a urgencias y te ignoraron, tardaron mucho o te atendieron mal",
+      "palabras_clave": ["urgencias", "emergencia", "demora", "ignorar", "ambulancia", "cruz roja"],
+      "articulos": [
+        {
+          "numero": "Artículo 116 - Ley General de Salud",
+          "contenido": "En caso de urgencia, ningún hospital puede negar la atención. Están obligados a estabilizar al paciente.",
+          "penalidad": "Multa de 500 a 2000 UMAS",
+          "aplica": ["Todos en estado de urgencia"]
+        },
+        {
+          "numero": "Artículo 117 - Ley General de Salud",
+          "contenido": "Los servicios de urgencias deben contar con personal capacitado y equipo suficiente las 24 horas del día.",
+          "aplica": ["Pacientes de urgencias"]
+        },
+        {
+          "numero": "Artículo 118 - Ley General de Salud",
+          "contenido": "La demora injustificada en la atención de urgencias constituye negligencia médica.",
+          "aplica": ["Pacientes"]
+        }
+      ]
+    },
+    {
+      "nombre": "Negación de Incapacidad Médica",
+      "descripcion": "El médico del IMSS o ISSSTE no te quiere dar tu incapacidad cuando estás enfermo o accidentado",
+      "palabras_clave": ["incapacidad", "enfermedad", "accidente", "IMSS", "ISSSTE", "días de descanso"],
+      "articulos": [
+        {
+          "numero": "Artículo 97 - Ley del Seguro Social",
+          "contenido": "El asegurado tiene derecho a incapacidad temporal cuando la enfermedad o accidente impida trabajar.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 98 - Ley del Seguro Social",
+          "contenido": "La incapacidad debe ser otorgada por el médico del IMSS y puede ser de hasta 52 semanas.",
+          "aplica": ["Trabajadores"]
+        },
+        {
+          "numero": "Artículo 99 - Ley del Seguro Social",
+          "contenido": "Si la incapacidad no es otorgada, el trabajador puede inconformarse ante el IMSS o demandar ante el Tribunal Laboral.",
+          "aplica": ["Trabajadores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Falta de Referencia a Especialista",
+      "descripcion": "El médico general no te quiere mandar con el especialista que necesitas",
+      "palabras_clave": ["especialista", "referencia", "segundo nivel", "especialidad", "cardiología", "ginecología"],
+      "articulos": [
+        {
+          "numero": "Artículo 54 - Ley General de Salud",
+          "contenido": "El paciente tiene derecho a recibir atención de especialistas cuando su padecimiento lo requiera.",
+          "aplica": ["Pacientes"]
+        },
+        {
+          "numero": "Artículo 55 - Ley General de Salud",
+          "contenido": "El médico de primer nivel debe referir al especialista en un plazo máximo de 15 días.",
+          "aplica": ["Pacientes"]
+        }
+      ]
+    },
+    {
+      "nombre": "Salud Mental - Negación de Atención Psiquiátrica",
+      "descripcion": "Buscaste ayuda psiquiátrica o psicológica y no te dieron atención",
+      "palabras_clave": ["salud mental", "psiquiatría", "psicología", "depresión", "ansiedad", "terapia"],
+      "articulos": [
+        {
+          "numero": "Artículo 4 - Constitución Política",
+          "contenido": "El derecho a la salud incluye la salud mental. El Estado debe garantizar servicios de atención psiquiátrica y psicológica.",
+          "aplica": ["Personas con trastornos mentales"]
+        },
+        {
+          "numero": "Artículo 75 - Ley General de Salud",
+          "contenido": "Los servicios de salud mental deben estar disponibles en todas las instituciones de salud pública.",
+          "aplica": ["Pacientes de salud mental"]
+        },
+        {
+          "numero": "Artículo 77 - Ley General de Salud",
+          "contenido": "Las personas con trastornos mentales no pueden ser discriminadas ni aisladas. Tienen derecho a atención digna.",
+          "aplica": ["Personas con depresión, ansiedad, bipolaridad, esquizofrenia"]
+        }
+      ]
+    },
+    {
+      "nombre": "Internamiento Psiquiátrico Forzado",
+      "descripcion": "Te internaron en un psiquiátrico contra tu voluntad sin orden judicial",
+      "palabras_clave": ["internamiento", "psiquiátrico", "forzado", "contra voluntad", "manicomio"],
+      "articulos": [
+        {
+          "numero": "Artículo 16 - Constitución Política",
+          "contenido": "Nadie puede ser molestado en su persona sin mandamiento escrito de autoridad competente.",
+          "aplica": ["Personas con trastornos mentales"]
+        },
+        {
+          "numero": "Artículo 80 - Ley General de Salud",
+          "contenido": "El internamiento psiquiátrico solo puede ser voluntario. En casos excepcionales, requiere orden judicial.",
+          "aplica": ["Pacientes psiquiátricos"]
+        },
+        {
+          "numero": "Artículo 81 - Ley General de Salud",
+          "contenido": "Si una persona representa un peligro inminente para sí o para otros, puede ser internada hasta por 72 horas con aviso al juez.",
+          "aplica": ["Crisis psiquiátrica"]
+        }
+      ]
+    },
+    {
+      "nombre": "Discapacidad y Accesibilidad",
+      "descripcion": "Los hospitales o clínicas no tienen accesibilidad para personas con discapacidad",
+      "palabras_clave": ["discapacidad", "accesibilidad", "rampa", "silla de ruedas", "barreras", "inclusión"],
+      "articulos": [
+        {
+          "numero": "Artículo 4 - Constitución Política",
+          "contenido": "Las personas con discapacidad tienen derecho a servicios de salud accesibles y adaptados.",
+          "aplica": ["Personas con discapacidad"]
+        },
+        {
+          "numero": "Artículo 45 - Ley General de Salud",
+          "contenido": "Las unidades médicas deben contar con accesibilidad arquitectónica (rampas, baños adaptados, señalización Braille).",
+          "aplica": ["Personas con discapacidad motriz, visual, auditiva"]
+        },
+        {
+          "numero": "Artículo 46 - Ley General de Salud",
+          "contenido": "Se debe proporcionar información en formatos accesibles (Braille, lengua de señas, lectura fácil).",
+          "aplica": ["Pacientes con discapacidad sensorial"]
+        }
+      ]
+    },
+    {
+      "nombre": "Trasplantes y Donación de Órganos",
+      "descripcion": "Necesitas un trasplante y no sabes tus derechos o te están negando la lista de espera",
+      "palabras_clave": ["trasplante", "órganos", "donación", "riñón", "hígado", "córnea", "lista de espera"],
+      "articulos": [
+        {
+          "numero": "Artículo 321 - Ley General de Salud",
+          "contenido": "Toda persona tiene derecho a recibir un trasplante si cumple con los requisitos médicos.",
+          "aplica": ["Pacientes en lista de espera"]
+        },
+        {
+          "numero": "Artículo 324 - Ley General de Salud",
+          "contenido": "La asignación de órganos es equitativa y basada en criterios médicos, no económicos.",
+          "aplica": ["Pacientes"]
+        },
+        {
+          "numero": "Artículo 326 - Ley General de Salud",
+          "contenido": "En México, todos somos donadores potenciales a menos que hayamos manifestado lo contrario en vida.",
+          "aplica": ["Todos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Muerte por Negligencia Médica",
+      "descripcion": "Un familiar falleció por mala atención médica y quieres justicia",
+      "palabras_clave": ["muerte", "fallecimiento", "negligencia", "malapraxis", "error médico"],
+      "articulos": [
+        {
+          "numero": "Artículo 330 - Código Penal Federal",
+          "contenido": "El profesional de la salud que por negligencia cause la muerte de un paciente incurre en homicidio culposo.",
+          "penalidad": "Prisión de 4 a 12 años + suspensión profesional",
+          "aplica": ["Familiares", "Pacientes fallecidos"]
+        },
+        {
+          "numero": "Artículo 1916 - Código Civil Federal",
+          "contenido": "Los familiares de la víctima tienen derecho a indemnización por daño moral, gastos funerarios y pérdida de ingresos.",
+          "penalidad": "Indemnización económica",
+          "aplica": ["Familiares directos"]
+        },
+        {
+          "numero": "Artículo 1917 - Código Civil Federal",
+          "contenido": "La indemnización por muerte por negligencia médica puede incluir: dependientes económicos, cónyuge, hijos y padres.",
+          "aplica": ["Familiares"]
+        }
+      ]
+    }
+  ]
+}

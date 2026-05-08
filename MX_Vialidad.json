@@ -1,0 +1,91 @@
+{
+  "titulo": "Tránsito y Seguridad Vial - México",
+  "subtitulo": "Obligaciones, derechos y reglas para circular seguro. Multas, accidentes y qué hacer.",
+  "autor": "NahomiJustice - Seguridad en la Vía",
+  "version": "1.0",
+  "color_theme": "robo_transito",
+  "situaciones": [
+    {
+      "nombre": "Documentos Obligatorios",
+      "descripcion": "Te detuvieron y te piden papeles: licencia, tarjeta, seguro, verificación",
+      "palabras_clave": ["licencia", "tarjeta de circulación", "seguro", "verificación", "documentos", "revisión"],
+      "articulos": [
+        {
+          "numero": "Artículo 46 - Ley de Caminos y Puentes",
+          "contenido": "Para circular debes portar: Licencia vigente, Tarjeta de circulación, Póliza de seguro vigente y Verificación al día (según tu estado). Deben ser originales o copias certificadas.",
+          "aplica": ["Conductores de vehículos"]
+        },
+        {
+          "numero": "Artículo 49 - Reglamento de Tránsito",
+          "contenido": "No es obligatorio entregar tus documentos al agente, solo mostrarlos. Pueden retener tu tarjeta o licencia SOLO por infracción grave o falta de documentos.",
+          "penalidad": "Multa de 5 a 20 UMAS por cada documento faltante",
+          "aplica": ["Todos los conductores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Multas y Retención de Vehículo",
+      "descripcion": "Te pusieron multa, te quitaron la placa o te llevaron el auto al corralón",
+      "palabras_clave": ["multa", "infracción", "corralón", "retención", "placas", "grúa"],
+      "articulos": [
+        {
+          "numero": "Artículo 165 - Reglamento de Tránsito",
+          "contenido": "Solo pueden remolcar tu vehículo si: estorba, está en lugar prohibido, falta de documentación o por delito. Deben entregarte un recibo oficial detallado.",
+          "aplica": ["Propietarios", "Conductores"]
+        },
+        {
+          "numero": "Artículo 172 - Reglamento de Tránsito",
+          "contenido": "Tienes derecho a pagar con descuento (hasta el 50%) si pagas antes de los 15 días. También puedes impugnar la multa si es injusta.",
+          "aplica": ["Infraccionados"]
+        },
+        {
+          "numero": "Artículo 18 - Constitución",
+          "contenido": "Prohibido el cobro de 'mordidas' o acuerdos directos con el agente. Toda sanción debe ser por boleta oficial y pagada en instituciones autorizadas.",
+          "penalidad": "Delito de abuso de autoridad para el agente",
+          "aplica": ["Todos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Accidentes de Tránsito",
+      "descripcion": "Chocaste, te chocaron o hubo daños/lesiones. Qué hacer y quién paga",
+      "palabras_clave": ["choque", "accidente", "daños", "lesiones", "seguro", "responsabilidad", "peritaje"],
+      "articulos": [
+        {
+          "numero": "Artículo 69 - Ley de Caminos",
+          "contenido": "Obligatorio tener seguro de daños a terceros. Si hay lesiones o muertos, NO muevas el vehículo, llama a policía y ambulancias. Si solo hay daños, retírense a lugar seguro.",
+          "aplica": ["Todos los conductores"]
+        },
+        {
+          "numero": "Artículo 72 - Código Civil Federal",
+          "contenido": "Quien cause daño es responsable de repararlo: reparación del vehículo, gastos médicos, indemnización por lesiones o muerte.",
+          "aplica": ["Responsables del accidente"]
+        },
+        {
+          "numero": "Artículo 267 - Código Penal",
+          "contenido": "Si hay lesiones graves o muerte por manejar en estado de ebriedad o con exceso de velocidad, es delito con cárcel y pérdida de licencia.",
+          "penalidad": "Prisión de 3 a 10 años + suspensión vitalicia",
+          "aplica": ["Conductores en estado de intoxicación o imprudencia"]
+        }
+      ]
+    },
+    {
+      "nombre": "Peatones y Ciclistas",
+      "descripcion": "Te atropellaron, no te dieron paso o te trataron mal en la vía",
+      "palabras_clave": ["peatón", "ciclista", "prioridad", "paso", "atropello", "ciclovía"],
+      "articulos": [
+        {
+          "numero": "Artículo 13 - Reglamento de Tránsito",
+          "contenido": "El peatón tiene SIEMPRE prioridad absoluta. Los vehículos deben ceder el paso en cruces, esquinas y pasos peatonales.",
+          "aplica": ["Todos los peatones"]
+        },
+        {
+          "numero": "Artículo 25 - Ley de Movilidad",
+          "contenido": "Ciclistas tienen derecho a usar la vía, carriles exclusivos y respeto. Los autos deben guardar distancia al rebasar.",
+          "aplica": ["Ciclistas"]
+        }
+      ]
+    }
+  ]
+}
+

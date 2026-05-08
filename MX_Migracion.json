@@ -1,0 +1,45 @@
+{
+  "titulo": "Derechos Migratorios - México",
+  "subtitulo": "Todos tenemos derechos, estatus regular o no. Trato digno y protección.",
+  "autor": "NahomiJustice - Frontera y Derechos",
+  "version": "1.0",
+  "color_theme": "gris_migracion",
+  "situaciones": [
+    {
+      "nombre": "Derechos básicos para todos",
+      "descripcion": "Entres, estés o viajes: derechos que nadie te puede quitar, sin importar tu estatus",
+      "palabras_clave": ["derechos", "digno", "igualdad", "salud", "educación", "justicia"],
+      "articulos": [
+        {
+          "numero": "Artículo 1 - Constitución",
+          "contenido": "Todas las personas gozan de derechos humanos, sin discriminación. No importa tu nacionalidad ni estatus migratorio.",
+          "aplica": ["Todos en México"]
+        },
+        {
+          "numero": "Artículo 8 - Ley de Migración",
+          "contenido": "Derecho a salud, educación, justicia, identidad y trato digno, estés regular o no.",
+          "aplica": ["Migrantes", "refugiados", "extranjeros"]
+        }
+      ]
+    },
+    {
+      "nombre": "Entrada, estancia y documentos",
+      "descripcion": "Cómo entrar, pedir visa, residencia, refugio, asilo o nacionalidad",
+      "palabras_clave": ["visa", "residencia", "refugio", "asilo", "nacionalidad", "permiso"],
+      "articulos": [
+        {
+          "numero": "Artículo 10 - Ley de Migración",
+          "contenido": "Derecho a unidad familiar. Puedes pedir refugio si huyes por guerra, violencia o persecución.",
+          "aplica": ["Solicitantes de protección"]
+        },
+        {
+          "numero": "Artículo 11 - Ley de Migración",
+          "contenido": "Si te detienen: derecho a abogado, traductor, llamar a tu consulado y saber por qué te retienen.",
+          "penalidad": "Prohibido maltrato o detención arbitraria",
+          "aplica": ["Todos"]
+        }
+      ]
+    }
+  ]
+}
+

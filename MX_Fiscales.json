@@ -1,0 +1,61 @@
+{
+  "titulo": "Impuestos y Obligaciones Fiscales - México",
+  "subtitulo": "Entiende qué debes hacer, por qué y cómo. Sin miedos, claro y sencillo.",
+  "autor": "NahomiJustice - Economía Clara",
+  "version": "1.0",
+  "color_theme": "amarillo_fiscal",
+  "situaciones": [
+    {
+      "nombre": "¿Qué es el RFC y para qué sirve?",
+      "descripcion": "Primer paso para todo trámite: darse de alta y tener tu registro fiscal",
+      "palabras_clave": ["RFC", "SAT", "alta", "registro", "identificación", "fiscal"],
+      "articulos": [
+        {
+          "numero": "Artículo 27 - Código Fiscal",
+          "contenido": "Toda persona física o moral debe inscribirse en el RFC ante el SAT. Es tu identificación oficial para trámites fiscales.",
+          "aplica": ["Todos", "trabajadores", "empresarios"]
+        },
+        {
+          "numero": "Artículo 29 - Código Fiscal",
+          "contenido": "Es gratuito, se tramita en línea o presencial. Obligatorio para facturar, cobrar, trabajar formalmente.",
+          "aplica": ["Todos"]
+        }
+      ]
+    },
+    {
+      "nombre": "¿Cuándo y qué impuestos pago?",
+      "descripcion": "Diferencias entre ISR, IVA, cuándo declarar, plazos y obligaciones",
+      "palabras_clave": ["ISR", "IVA", "declaración", "pago", "plazos", "SAT", "impuestos"],
+      "articulos": [
+        {
+          "numero": "Artículo 1 - Ley del ISR",
+          "contenido": "Pagas sobre lo que ganas. Trabajadores: te lo retienen automático. Independientes: declaras tú cada mes/año.",
+          "aplica": ["Quien obtiene ingresos"]
+        },
+        {
+          "numero": "Artículo 1 - Ley del IVA",
+          "contenido": "Impuesto al consumo: 16% en casi todo. Lo cobras al vender, lo deduces al comprar.",
+          "aplica": ["Comerciantes", "prestadores"]
+        }
+      ]
+    },
+    {
+      "nombre": "¿Qué pasa si no cumplo?",
+      "descripcion": "Multas, recargos, actualizaciones. Derecho a aclarar y reclamar",
+      "palabras_clave": ["multas", "recargos", "omisión", "declaración", "reclamo", "SAT"],
+      "articulos": [
+        {
+          "numero": "Artículo 70 - Código Fiscal",
+          "contenido": "No declarar o pagar tarde: multas del 20% al 100% del impuesto + recargos mensuales.",
+          "aplica": ["Quien no cumple"]
+        },
+        {
+          "numero": "Artículo 116 - Código Fiscal",
+          "contenido": "Tienes derecho a reclamar, corregir errores y pedir devoluciones si te cobraron de más.",
+          "aplica": ["Todos los contribuyentes"]
+        }
+      ]
+    }
+  ]
+}
+

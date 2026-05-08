@@ -1,0 +1,343 @@
+{
+  "titulo": "Código Penal Federal - Delitos y Sanciones",
+  "subtitulo": "Los delitos tienen consecuencias. Conoce tus derechos si fuiste víctima.",
+  "autor": "NahomiJustice - Justicia Penal",
+  "version": "1.0",
+  "color_theme": "rojo_oscuro",
+  "situaciones": [
+    {
+      "nombre": "Robo",
+      "descripcion": "Cuando alguien se lleva tus pertenencias sin tu permiso, con o sin violencia",
+      "palabras_clave": ["robo", "hurtar", "sustraer", "ladrón", "asalto", "carterista"],
+      "articulos": [
+        {
+          "numero": "Artículo 220 - Código Penal Federal",
+          "contenido": "Comete el delito de robo quien se apodera de una cosa ajena mueble, sin derecho y sin consentimiento de quien puede disponer de ella.",
+          "penalidad": "Prisión de 6 meses a 6 años",
+          "aplica": ["Víctimas de robo", "Ciudadanos"]
+        },
+        {
+          "numero": "Artículo 221 - Código Penal Federal",
+          "contenido": "Si el robo se comete con violencia física o moral, la pena se agrava.",
+          "penalidad": "Prisión de 4 a 12 años",
+          "aplica": ["Víctimas de robo con violencia"]
+        },
+        {
+          "numero": "Artículo 222 - Código Penal Federal",
+          "contenido": "El robo cometido con arma blanca o de fuego se considera agravado.",
+          "penalidad": "Prisión de 8 a 15 años",
+          "aplica": ["Víctimas"]
+        }
+      ]
+    },
+    {
+      "nombre": "Violación / Abuso Sexual",
+      "descripcion": "Acto sexual sin tu consentimiento o contra tu voluntad",
+      "palabras_clave": ["violación", "abuso", "sexual", "consentimiento", "agresión", "toques", "manoseo"],
+      "articulos": [
+        {
+          "numero": "Artículo 265 - Código Penal Federal",
+          "contenido": "Comete el delito de violación quien realice acto sexual con persona sin su consentimiento.",
+          "penalidad": "Prisión de 8 a 20 años",
+          "aplica": ["Víctimas", "Mujeres", "Hombres", "Personas diversas"]
+        },
+        {
+          "numero": "Artículo 266 - Código Penal Federal",
+          "contenido": "La pena se agrava si la víctima es menor de edad, no puede resistir, o si el agresor es familiar, pareja o tiene relación de autoridad.",
+          "penalidad": "Prisión de 15 a 25 años",
+          "aplica": ["Menores", "Personas con discapacidad", "Parejas", "Hijas/os"]
+        },
+        {
+          "numero": "Artículo 266 Bis - Código Penal Federal",
+          "contenido": "El abuso sexual no consentido, sin llegar a violación, también es delito.",
+          "penalidad": "Prisión de 1 a 6 años",
+          "aplica": ["Víctimas de acoso sexual"]
+        },
+        {
+          "numero": "Artículo 267 - Código Penal Federal",
+          "contenido": "Si el abuso o violación causa daño físico o psicológico grave, la pena aumenta.",
+          "penalidad": "Prisión de 20 a 35 años",
+          "aplica": ["Víctimas"]
+        }
+      ]
+    },
+    {
+      "nombre": "Fraude / Estafa",
+      "descripcion": "Te engañaron para robarte dinero, propiedades o información personal",
+      "palabras_clave": ["fraude", "estafa", "engaño", "tarjeta", "bancario", "phishing", "clonación"],
+      "articulos": [
+        {
+          "numero": "Artículo 230 - Código Penal Federal",
+          "contenido": "Comete fraude quien engañando a alguien o aprovechándose del error en que éste se halle, obtiene un lucro indebido.",
+          "penalidad": "Prisión de 1 a 8 años + multa de 10 a 100 días",
+          "aplica": ["Víctimas de fraude"]
+        },
+        {
+          "numero": "Artículo 231 - Código Penal Federal",
+          "contenido": "El fraude a través de medios electrónicos, bancarios o telefónicos se considera agravado.",
+          "penalidad": "Prisión de 3 a 12 años + multa de 50 a 200 días",
+          "aplica": ["Usuarios bancarios", "Tarjetahabientes"]
+        },
+        {
+          "numero": "Artículo 232 - Código Penal Federal",
+          "contenido": "El fraude por más de 1000 veces el salario mínimo se considera grave.",
+          "penalidad": "Prisión de 5 a 15 años",
+          "aplica": ["Víctimas de fraudes mayores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Extorsión",
+      "descripcion": "Te amenazan con dañarte a ti o tu familia si no les das dinero o algo de valor",
+      "palabras_clave": ["extorsión", "amenaza", "dinero", "cobro de piso", "secuestro virtual", "chalán"],
+      "articulos": [
+        {
+          "numero": "Artículo 248 - Código Penal Federal",
+          "contenido": "Comete extorsión quien obligue a otro a dar dinero, bienes o cualquier cosa mediante amenazas de causar daño a su persona, familia o propiedades.",
+          "penalidad": "Prisión de 4 a 12 años + multa de 50 a 200 días",
+          "aplica": ["Víctimas de extorsión"]
+        },
+        {
+          "numero": "Artículo 248 Bis - Código Penal Federal",
+          "contenido": "Si la extorsión se comete por teléfono, correo o medios electrónicos, la pena se agrava.",
+          "penalidad": "Prisión de 6 a 15 años",
+          "aplica": ["Víctimas"]
+        },
+        {
+          "numero": "Artículo 248 Ter - Código Penal Federal",
+          "contenido": "Si la extorsión es cometida por un servidor público o policía, la pena aumenta considerablemente.",
+          "penalidad": "Prisión de 10 a 20 años + destitución",
+          "aplica": ["Ciudadanos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Secuestro",
+      "descripcion": "Te privaron de tu libertad para pedir dinero o cualquier otra cosa a cambio de liberarte",
+      "palabras_clave": ["secuestro", "privación", "libertad", "rescate", "plagio", "levantón"],
+      "articulos": [
+        {
+          "numero": "Artículo 165 - Código Penal Federal",
+          "contenido": "Comete secuestro quien prive de la libertad a otro con el propósito de obtener rescate, causar daño o beneficiarse de cualquier forma.",
+          "penalidad": "Prisión de 20 a 50 años",
+          "aplica": ["Víctimas", "Familiares"]
+        },
+        {
+          "numero": "Artículo 166 - Código Penal Federal",
+          "contenido": "Si la víctima es menor de edad, adulto mayor o persona con discapacidad, la pena aumenta.",
+          "penalidad": "Prisión de 30 a 60 años",
+          "aplica": ["Menores", "Adultos mayores", "Discapacitados"]
+        },
+        {
+          "numero": "Artículo 167 - Código Penal Federal",
+          "contenido": "Si durante el secuestro la víctima sufre lesiones o muerte, la pena es máxima.",
+          "penalidad": "Prisión de 40 a 70 años",
+          "aplica": ["Víctimas"]
+        }
+      ]
+    },
+    {
+      "nombre": "Lesiones",
+      "descripcion": "Te golpearon, lastimaron, causaron heridas o fracturas",
+      "palabras_clave": ["golpes", "lesiones", "heridas", "fracturas", "agresión", "pelea", "moretones"],
+      "articulos": [
+        {
+          "numero": "Artículo 291 - Código Penal Federal",
+          "contenido": "Comete lesiones quien cause un daño físico o mental a otro.",
+          "penalidad": "Dependiendo de la gravedad, de 6 meses a 8 años",
+          "aplica": ["Víctimas de violencia"]
+        },
+        {
+          "numero": "Artículo 292 - Código Penal Federal",
+          "contenido": "Las lesiones se clasifican: 1) que no ponen en peligro la vida, 2) que ponen en peligro la vida, 3) que dejan cicatriz o enfermedad, 4) que causan pérdida de órgano o función.",
+          "penalidad": "De 1 mes a 10 años según la gravedad",
+          "aplica": ["Víctimas"]
+        }
+      ]
+    },
+    {
+      "nombre": "Homicidio",
+      "descripcion": "Una persona mató a un familiar, amigo o conocido tuyo",
+      "palabras_clave": ["homicidio", "muerte", "asesinato", "matar", "privación de la vida"],
+      "articulos": [
+        {
+          "numero": "Artículo 302 - Código Penal Federal",
+          "contenido": "Comete homicidio quien priva de la vida a otro.",
+          "penalidad": "Prisión de 12 a 24 años (homicidio simple)",
+          "aplica": ["Familiares", "Víctimas indirectas"]
+        },
+        {
+          "numero": "Artículo 315 - Código Penal Federal",
+          "contenido": "Es homicidio calificado cuando hay alevosía, ventaja, traición o ensañamiento.",
+          "penalidad": "Prisión de 30 a 60 años",
+          "aplica": ["Familiares"]
+        },
+        {
+          "numero": "Artículo 320 - Código Penal Federal",
+          "contenido": "Es homicidio culposo (accidental) cuando no hay intención de matar.",
+          "penalidad": "Prisión de 1 a 8 años + reparación del daño",
+          "aplica": ["Familiares", "Víctimas"]
+        }
+      ]
+    },
+    {
+      "nombre": "Daños a la Propiedad / Vandalismo",
+      "descripcion": "Te rompieron, rayaron, quemaron o dañaron algo que es tuyo",
+      "palabras_clave": ["daños", "rayaron", "rompieron", "destrucción", "vandalismo", "grafiti"],
+      "articulos": [
+        {
+          "numero": "Artículo 350 - Código Penal Federal",
+          "contenido": "Comete daño en propiedad ajena quien destruya, deteriore o haga inservible bienes de otro.",
+          "penalidad": "Multa de 30 a 100 días + reparación del daño",
+          "aplica": ["Propietarios", "Arrendatarios"]
+        },
+        {
+          "numero": "Artículo 351 - Código Penal Federal",
+          "contenido": "Si el daño es grave o afecta servicios públicos, la pena se agrava.",
+          "penalidad": "Prisión de 1 a 5 años + multa",
+          "aplica": ["Víctimas"]
+        },
+        {
+          "numero": "Artículo 352 - Código Penal Federal",
+          "contenido": "Si el daño se comete con violencia, la pena aumenta.",
+          "penalidad": "Prisión de 2 a 8 años",
+          "aplica": ["Víctimas"]
+        }
+      ]
+    },
+    {
+      "nombre": "Allanamiento de Morada",
+      "descripcion": "Entraron a tu casa sin tu permiso y sin orden judicial",
+      "palabras_clave": ["allanamiento", "casa", "entraron", "morada", "domicilio", "invadieron"],
+      "articulos": [
+        {
+          "numero": "Artículo 158 - Código Penal Federal",
+          "contenido": "Comete allanamiento quien, sin derecho y sin consentimiento de quien habita, ingrese a una casa o domicilio.",
+          "penalidad": "Prisión de 3 a 7 años + multa",
+          "aplica": ["Propietarios", "Arrendatarios"]
+        },
+        {
+          "numero": "Artículo 159 - Código Penal Federal",
+          "contenido": "Si el allanamiento lo comete un servidor público o policía sin orden judicial, la pena se agrava.",
+          "penalidad": "Prisión de 5 a 12 años + destitución",
+          "aplica": ["Ciudadanos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Amenazas",
+      "descripcion": "Alguien te ha dicho que te va a hacer daño a ti, tu familia o tus bienes",
+      "palabras_clave": ["amenazas", "miedo", "daño", "venganza", "intimidación"],
+      "articulos": [
+        {
+          "numero": "Artículo 279 - Código Penal Federal",
+          "contenido": "Comete amenazas quien anuncie a otro causarle un mal en su persona, bienes o familia.",
+          "penalidad": "Prisión de 1 a 4 años o multa",
+          "aplica": ["Víctimas de intimidación"]
+        },
+        {
+          "numero": "Artículo 280 - Código Penal Federal",
+          "contenido": "Si la amenaza es con causar la muerte, lesiones graves o daño grave, la pena aumenta.",
+          "penalidad": "Prisión de 2 a 8 años",
+          "aplica": ["Víctimas"]
+        }
+      ]
+    },
+    {
+      "nombre": "Robo de Identidad / Suplantación",
+      "descripcion": "Alguien usó tu nombre, CURP, INE o datos para hacer cosas malas",
+      "palabras_clave": ["identidad", "suplantación", "INE", "CURP", "datos", "personales", "phishing"],
+      "articulos": [
+        {
+          "numero": "Artículo 234 - Código Penal Federal",
+          "contenido": "Comete robo de identidad quien use documentos o información personal de otro para obtener un beneficio o causar daño.",
+          "penalidad": "Prisión de 2 a 8 años + multa",
+          "aplica": ["Víctimas de suplantación"]
+        },
+        {
+          "numero": "Artículo 235 - Código Penal Federal",
+          "contenido": "Si el robo de identidad causa daño patrimonial, la pena aumenta.",
+          "penalidad": "Prisión de 4 a 12 años",
+          "aplica": ["Víctimas de fraudes con identidad"]
+        }
+      ]
+    },
+    {
+      "nombre": "Violencia Intrafamiliar",
+      "descripcion": "Golpes, gritos, amenazas o control de un familiar hacia otro",
+      "palabras_clave": ["violencia", "familiar", "intrafamiliar", "golpes", "pareja", "esposo", "hijos"],
+      "articulos": [
+        {
+          "numero": "Artículo 200 - Código Penal Federal",
+          "contenido": "Comete violencia intrafamiliar quien ejerza poder físico, psicológico o económico sobre un familiar.",
+          "penalidad": "Prisión de 1 a 8 años + tratamiento psicológico",
+          "aplica": ["Mujeres", "Hombres", "Hijos", "Padres", "Parejas"]
+        },
+        {
+          "numero": "Artículo 201 - Código Penal Federal",
+          "contenido": "Si la víctima es menor de edad, adulto mayor o persona con discapacidad, la pena se agrava.",
+          "penalidad": "Prisión de 3 a 12 años",
+          "aplica": ["Menores", "Adultos mayores", "Discapacitados"]
+        }
+      ]
+    },
+    {
+      "nombre": "Pederastia",
+      "descripcion": "Un adulto realiza actos sexuales con un menor de edad",
+      "palabras_clave": ["pederastia", "menor", "niño", "abuso", "sexual", "infantil"],
+      "articulos": [
+        {
+          "numero": "Artículo 209 Bis - Código Penal Federal",
+          "contenido": "Comete pederastia quien realice actos sexuales con persona menor de 14 años.",
+          "penalidad": "Prisión de 15 a 35 años",
+          "aplica": ["Menores", "Padres", "Familiares"]
+        },
+        {
+          "numero": "Artículo 209 Ter - Código Penal Federal",
+          "contenido": "Si el pederasta es familiar, padrastro, maestro o tiene autoridad sobre el menor, la pena es máxima.",
+          "penalidad": "Prisión de 20 a 40 años + pérdida de patria potestad",
+          "aplica": ["Menores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Corrupción de Menores",
+      "descripcion": "Un adulto induce a un menor a consumir alcohol, drogas o a realizar actos indebidos",
+      "palabras_clave": ["corrupción", "menores", "inducir", "drogas", "alcohol", "vicios"],
+      "articulos": [
+        {
+          "numero": "Artículo 205 - Código Penal Federal",
+          "contenido": "Comete corrupción de menores quien induzca a un menor a consumir drogas, alcohol, o a realizar actos que dañen su desarrollo.",
+          "penalidad": "Prisión de 5 a 15 años",
+          "aplica": ["Menores", "Padres", "Familiares"]
+        }
+      ]
+    },
+    {
+      "nombre": "Trata de Personas",
+      "descripcion": "Te engañaron o forzaron a trabajar, prostituirte o mendigar sin tu voluntad",
+      "palabras_clave": ["trata", "esclavitud", "prostitución", "trabajo forzado", "mendicidad"],
+      "articulos": [
+        {
+          "numero": "Artículo 10 - Ley General para Prevenir la Trata de Personas",
+          "contenido": "Comete trata quien promueva, solicite, ofrezca o facilite la explotación de una persona.",
+          "penalidad": "Prisión de 15 a 30 años + multa",
+          "aplica": ["Víctimas de trata"]
+        }
+      ]
+    },
+    {
+      "nombre": "Portación de Arma Prohibida",
+      "descripcion": "Alguien trae arma sin permiso (pistola, cuchillo grande, navaja)",
+      "palabras_clave": ["arma", "pistola", "navaja", "cuchillo", "portación", "ilegal"],
+      "articulos": [
+        {
+          "numero": "Artículo 161 - Ley de Armas de Fuego",
+          "contenido": "La portación de armas sin permiso es un delito federal.",
+          "penalidad": "Prisión de 2 a 7 años + multa",
+          "aplica": ["Ciudadanos"]
+        }
+      ]
+    }
+  ]
+}

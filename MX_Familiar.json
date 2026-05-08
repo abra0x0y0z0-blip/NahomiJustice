@@ -1,0 +1,337 @@
+{
+  "titulo": "Derecho Familiar en México",
+  "subtitulo": "Protege a tu familia. Conoce tus derechos en divorcio, custodia, pensión y violencia familiar.",
+  "autor": "NahomiJustice - Justicia Familiar",
+  "version": "1.0",
+  "color_theme": "morado_familiar",
+  "situaciones": [
+    {
+      "nombre": "Divorcio Voluntario (Mutuo Acuerdo)",
+      "descripcion": "Tú y tu pareja decidieron separarse de común acuerdo, sin peleas ni conflictos",
+      "palabras_clave": ["divorcio", "voluntario", "mutuo acuerdo", "separación", "acuerdo"],
+      "articulos": [
+        {
+          "numero": "Artículo 283 - Código Civil Federal",
+          "contenido": "El divorcio voluntario procede cuando ambos cónyuges están de acuerdo y no tienen hijos menores de edad, o si los tienen, ya están convenidos los términos de custodia y pensión.",
+          "aplica": ["Cónyuges", "Parejas con hijos"]
+        },
+        {
+          "numero": "Artículo 284 - Código Civil Federal",
+          "contenido": "El convenio de divorcio debe incluir: pensión alimenticia, custodia de hijos, régimen de visitas y división de bienes.",
+          "aplica": ["Cónyuges", "Hijos"]
+        },
+        {
+          "numero": "Artículo 286 - Código Civil Federal",
+          "contenido": "El divorcio voluntario puede ser administrativo (si no hay hijos) o judicial (si hay hijos menores o incapaces).",
+          "aplica": ["Cónyuges"]
+        }
+      ]
+    },
+    {
+      "nombre": "Divorcio Necesario (Contencioso)",
+      "descripcion": "Tu pareja no quiere el divorcio o hay conflictos graves (infidelidad, violencia, abandono)",
+      "palabras_clave": ["divorcio", "necesario", "contencioso", "infidelidad", "violencia", "abandono"],
+      "articulos": [
+        {
+          "numero": "Artículo 267 - Código Civil Federal",
+          "contenido": "Son causas de divorcio necesario:\n- Infidelidad (adulterio);\n- Abandono del hogar sin causa justificada;\n- Violencia familiar (física o psicológica);\n- Negativa a cumplir con la pensión alimenticia;\n- Enfermedad grave contagiosa;\n- Conducta inmoral que afecte a la familia.",
+          "aplica": ["Cónyuges", "Víctimas"]
+        },
+        {
+          "numero": "Artículo 268 - Código Civil Federal",
+          "contenido": "El cónyuge inocente puede solicitar indemnización por daños y perjuicios.",
+          "penalidad": "Indemnización económica",
+          "aplica": ["Cónyuge afectado"]
+        },
+        {
+          "numero": "Artículo 269 - Código Civil Federal",
+          "contenido": "Si el divorcio es por violencia familiar, el agresor pierde la patria potestad y la custodia.",
+          "aplica": ["Víctimas", "Hijos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Pensión Alimenticia para Hijos",
+      "descripcion": "Tu expareja no paga la manutención de tus hijos",
+      "palabras_clave": ["pensión", "alimentos", "manutención", "hijos", "dinero para hijos"],
+      "articulos": [
+        {
+          "numero": "Artículo 4 - Constitución Política",
+          "contenido": "Los niños y niñas tienen derecho a la satisfacción de sus necesidades de alimentación, salud, educación y sano esparcimiento.",
+          "aplica": ["Menores", "Hijos"]
+        },
+        {
+          "numero": "Artículo 301 - Código Civil Federal",
+          "contenido": "La pensión alimenticia incluye: comida, vestido, habitación, atención médica, medicamentos y educación.",
+          "aplica": ["Hijos", "Menores"]
+        },
+        {
+          "numero": "Artículo 302 - Código Civil Federal",
+          "contenido": "Los alimentos son proporcionales al patrimonio del deudor y a las necesidades del acreedor.",
+          "aplica": ["Hijos", "Deudor alimentario"]
+        },
+        {
+          "numero": "Artículo 303 - Código Civil Federal",
+          "contenido": "La obligación de dar alimentos es recíproca: los padres deben a sus hijos y los hijos, en su caso, deben a sus padres.",
+          "aplica": ["Hijos", "Padres", "Adultos mayores"]
+        },
+        {
+          "numero": "Artículo 307 - Código Civil Federal",
+          "contenido": "Si el deudor no paga, se puede embargar su salario hasta el 30% para cubrir la pensión.",
+          "aplica": ["Hijos", "Madres", "Padres custodios"]
+        }
+      ]
+    },
+    {
+      "nombre": "Pensión Alimenticia para Cónyuge",
+      "descripcion": "Tu expareja no puede trabajar o gana mucho menos que tú",
+      "palabras_clave": ["pensión", "cónyuge", "exesposo", "exesposa", "alimentos conyugales"],
+      "articulos": [
+        {
+          "numero": "Artículo 304 - Código Civil Federal",
+          "contenido": "El cónyuge que no tiene bienes o no puede trabajar tiene derecho a recibir alimentos del otro cónyuge después del divorcio.",
+          "aplica": ["Excónyuges"]
+        },
+        {
+          "numero": "Artículo 305 - Código Civil Federal",
+          "contenido": "El derecho a recibir alimentos del cónyuge termina cuando:\n- El alimentado contrae nuevo matrimonio;\n- El alimentado puede trabajar;\n- El alimentado tiene conducta inmoral.",
+          "aplica": ["Excónyuges"]
+        }
+      ]
+    },
+    {
+      "nombre": "Custodia de los Hijos",
+      "descripcion": "No sabes quién se va a quedar con los hijos después del divorcio",
+      "palabras_clave": ["custodia", "hijos", "guarda", "convivencia", "con quién se quedan"],
+      "articulos": [
+        {
+          "numero": "Artículo 282 - Código Civil Federal",
+          "contenido": "El juez decidirá la custodia tomando en cuenta el interés superior del menor. Siempre se favorecerá el bienestar del niño.",
+          "aplica": ["Hijos", "Padres"]
+        },
+        {
+          "numero": "Artículo 282 Bis - Código Civil Federal",
+          "contenido": "Se prefiere la custodia compartida si ambos padres están de acuerdo y es beneficioso para el menor.",
+          "aplica": ["Hijos", "Padres"]
+        },
+        {
+          "numero": "Artículo 283 - Código Civil Federal",
+          "contenido": "En menores de 5 años, la custodia suele otorgarse a la madre, salvo que sea perjudicial.",
+          "aplica": ["Madres", "Hijos pequeños"]
+        },
+        {
+          "numero": "Artículo 284 - Código Civil Federal",
+          "contenido": "El padre que ha ejercido violencia familiar pierde automáticamente la custodia.",
+          "aplica": ["Víctimas", "Hijos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Régimen de Visitas / Convivencia",
+      "descripcion": "El otro padre no deja verte a tus hijos o no respeta las visitas",
+      "palabras_clave": ["visitas", "convivencia", "pasar tiempo", "hijos", "padre no custodio"],
+      "articulos": [
+        {
+          "numero": "Artículo 285 - Código Civil Federal",
+          "contenido": "El padre no custodio tiene derecho a convivir con sus hijos, salvo que sea peligroso para ellos.",
+          "aplica": ["Padres no custodios", "Hijos"]
+        },
+        {
+          "numero": "Artículo 286 - Código Civil Federal",
+          "contenido": "El régimen de visitas debe ser fijado por el juez si los padres no se ponen de acuerdo.",
+          "aplica": ["Padres", "Hijos"]
+        },
+        {
+          "numero": "Artículo 287 - Código Civil Federal",
+          "contenido": "Si el padre custodio impide las visitas sin justificación, puede perder la custodia.",
+          "aplica": ["Padres no custodios"]
+        }
+      ]
+    },
+    {
+      "nombre": "Violencia Familiar (Física, Psicológica, Económica)",
+      "descripcion": "Golpes, gritos, amenazas, control económico o aislamiento en tu hogar",
+      "palabras_clave": ["violencia", "familiar", "golpes", "maltrato", "control", "económico", "psicológico"],
+      "articulos": [
+        {
+          "numero": "Artículo 4 - Constitución",
+          "contenido": "Toda persona tiene derecho a una vida libre de violencia. El Estado tomará las medidas necesarias para prevenir, atender y erradicar la violencia familiar.",
+          "aplica": ["Todas las personas"]
+        },
+        {
+          "numero": "Artículo 6 - Ley General de Acceso a las Mujeres a una Vida Libre de Violencia",
+          "contenido": "La violencia familiar es cualquier acto de poder que cause daño físico, psicológico, patrimonial o económico.",
+          "penalidad": "Dependiendo de la gravedad, de 1 a 8 años de prisión",
+          "aplica": ["Mujeres", "Hombres", "Niños", "Adultos mayores"]
+        },
+        {
+          "numero": "Artículo 7 - Ley General de Acceso a las Mujeres",
+          "contenido": "La violencia psicológica es cualquier acto que cause daño emocional, disminución de autoestima, depresión o ansiedad.",
+          "aplica": ["Víctimas"]
+        },
+        {
+          "numero": "Artículo 8 - Ley General de Acceso a las Mujeres",
+          "contenido": "La violencia patrimonial es cualquier acto que cause daño a los bienes de la víctima (destruir cosas, no pagar pensión, etc.).",
+          "aplica": ["Víctimas"]
+        }
+      ]
+    },
+    {
+      "nombre": "Patria Potestad",
+      "descripcion": "Te quieren quitar o no sabes si puedes tomar decisiones sobre tus hijos",
+      "palabras_clave": ["patria potestad", "decisiones", "hijos", "autoridad", "educación"],
+      "articulos": [
+        {
+          "numero": "Artículo 416 - Código Civil Federal",
+          "contenido": "La patria potestad es el conjunto de derechos y obligaciones que tienen los padres sobre sus hijos: crianza, educación, representación legal y administración de bienes.",
+          "aplica": ["Padres", "Hijos"]
+        },
+        {
+          "numero": "Artículo 417 - Código Civil Federal",
+          "contenido": "La patria potestad corresponde a ambos padres, aunque estén divorciados o separados.",
+          "aplica": ["Padres"]
+        },
+        {
+          "numero": "Artículo 418 - Código Civil Federal",
+          "contenido": "Se pierde la patria potestad por: maltrato, abandono, corrupción de menores, o condena penal grave.",
+          "aplica": ["Padres maltratadores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Reconocimiento de Hijos",
+      "descripcion": "El otro padre no quiere reconocer a su hijo o no aparece en el acta de nacimiento",
+      "palabras_clave": ["reconocimiento", "hijo", "acta de nacimiento", "padre", "filiación"],
+      "articulos": [
+        {
+          "numero": "Artículo 324 - Código Civil Federal",
+          "contenido": "La madre puede solicitar el reconocimiento forzoso del padre mediante juicio de reconocimiento de paternidad.",
+          "aplica": ["Madres", "Hijos"]
+        },
+        {
+          "numero": "Artículo 325 - Código Civil Federal",
+          "contenido": "La prueba de ADN es suficiente para demostrar la paternidad. El padre no puede negarse sin causa justificada.",
+          "aplica": ["Madres", "Hijos"]
+        },
+        {
+          "numero": "Artículo 326 - Código Civil Federal",
+          "contenido": "Una vez reconocido, el hijo tiene derecho a pensión alimenticia, herencia y apellidos.",
+          "aplica": ["Hijos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Adopción",
+      "descripcion": "Quieres adoptar un niño o niña y no sabes el proceso",
+      "palabras_clave": ["adopción", "adoptar", "niño", "niña", "familia adoptiva"],
+      "articulos": [
+        {
+          "numero": "Artículo 410 - Código Civil Federal",
+          "contenido": "La adopción integra al adoptado como hijo a todos los efectos legales.",
+          "aplica": ["Adoptantes", "Niños"]
+        },
+        {
+          "numero": "Artículo 411 - Código Civil Federal",
+          "contenido": "Pueden adoptar quienes tengan 25 años o más y 17 años de diferencia con el adoptado.",
+          "aplica": ["Adoptantes"]
+        },
+        {
+          "numero": "Artículo 412 - Código Civil Federal",
+          "contenido": "No pueden adoptar quienes hayan sido condenados por violencia familiar o delitos sexuales.",
+          "aplica": ["Adoptantes", "Protección de menores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Herencias y Sucesiones",
+      "descripcion": "Falleció un familiar y no sabes quién hereda o cómo repartir los bienes",
+      "palabras_clave": ["herencia", "sucesión", "testamento", "bienes", "fallecimiento", "muerte"],
+      "articulos": [
+        {
+          "numero": "Artículo 1281 - Código Civil Federal",
+          "contenido": "La sucesión legítima es cuando el difunto no dejó testamento. Heredan: cónyuge, hijos y padres en ese orden.",
+          "aplica": ["Familiares", "Herederos"]
+        },
+        {
+          "numero": "Artículo 1282 - Código Civil Federal",
+          "contenido": "Si no hay testamento, los hijos heredan todo por partes iguales. Si no hay hijos, hereda el cónyuge.",
+          "aplica": ["Herederos"]
+        },
+        {
+          "numero": "Artículo 1283 - Código Civil Federal",
+          "contenido": "El cónyuge sobreviviente tiene derecho a la legítima (parte de la herencia) aunque haya testamento.",
+          "aplica": ["Viudas", "Viudos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Registro de Nacimiento Tardío",
+      "descripcion": "Una persona no tiene acta de nacimiento (no fue registrada al nacer)",
+      "palabras_clave": ["registro", "nacimiento", "acta", "tardío", "sin documentos"],
+      "articulos": [
+        {
+          "numero": "Artículo 76 - Ley del Registro Civil",
+          "contenido": "Se puede registrar a una persona en cualquier momento de su vida, con dos testigos y pruebas de identidad.",
+          "aplica": ["Personas sin acta de nacimiento"]
+        },
+        {
+          "numero": "Artículo 77 - Ley del Registro Civil",
+          "contenido": "El registro tardío es gratuito para personas en situación vulnerable.",
+          "aplica": ["Personas de bajos recursos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Matrimonio Igualitario",
+      "descripcion": "Parejas del mismo sexo quieren casarse y les niegan el derecho",
+      "palabras_clave": ["matrimonio", "igualitario", "homosexual", "lesbiana", "gay", "LGBT"],
+      "articulos": [
+        {
+          "numero": "Artículo 146 - Código Civil Federal",
+          "contenido": "El matrimonio es la unión libre de dos personas para realizar la comunidad de vida. No se especifica sexo, por lo que aplica a parejas del mismo sexo.",
+          "aplica": ["Parejas LGBT"]
+        },
+        {
+          "numero": "Artículo 1 - Constitución (Interpretación SCJN)",
+          "contenido": "La Suprema Corte de Justicia ha declarado inconstitucional negar el matrimonio a parejas del mismo sexo.",
+          "aplica": ["Parejas LGBT"]
+        }
+      ]
+    },
+    {
+      "nombre": "Concubinato",
+      "descripcion": "Vives con tu pareja sin estar casado y quieres saber tus derechos",
+      "palabras_clave": ["concubinato", "vivir juntos", "unión libre", "pareja", "sin casarse"],
+      "articulos": [
+        {
+          "numero": "Artículo 291 - Código Civil Federal",
+          "contenido": "El concubinato es la unión de dos personas que viven juntas como pareja por más de 2 años (o desde que tienen hijos).",
+          "aplica": ["Parejas en unión libre"]
+        },
+        {
+          "numero": "Artículo 292 - Código Civil Federal",
+          "contenido": "El concubinato da derecho a herencia y pensión alimenticia en caso de separación o muerte.",
+          "aplica": ["Concubinos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Violencia Vicaria",
+      "descripcion": "Tu expareja te daña a través de tus hijos (no los deja ver, los golpea para lastimarte, habla mal de ti)",
+      "palabras_clave": ["violencia", "vicaria", "hijos", "expareja", "manipulación", "alienación"],
+      "articulos": [
+        {
+          "numero": "Artículo 4 - Constitución (Reforma 2023)",
+          "contenido": "Se reconoce y prohíbe la violencia vicaria como forma de violencia contra las mujeres.",
+          "aplica": ["Madres", "Hijos"]
+        },
+        {
+          "numero": "Artículo 6 Bis - Ley General de Acceso a las Mujeres",
+          "contenido": "La violencia vicaria es cualquier acto que cause daño a los hijos para lastimar a la madre.",
+          "penalidad": "Prisión de 3 a 10 años + pérdida de patria potestad",
+          "aplica": ["Madres", "Hijos"]
+        }
+      ]
+    }
+  ]
+}

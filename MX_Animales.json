@@ -1,0 +1,59 @@
+{
+  "titulo": "Protección y Bienestar Animal - México",
+  "subtitulo": "Los animales son seres sintientes: tienen derecho a vida digna, cuidado y respeto.",
+  "autor": "NahomiJustice - Vida y Respeto",
+  "version": "1.0",
+  "color_theme": "naranja_naturaleza",
+  "situaciones": [
+    {
+      "nombre": "Maltrato, abandono o falta de cuidado",
+      "descripcion": "Golpes, hambre, sed, soledad, abandono, exposición al sol/frío, falta de atención",
+      "palabras_clave": ["maltrato", "abandono", "golpes", "hambre", "sed", "cuidado", "sufrimiento"],
+      "articulos": [
+        {
+          "numero": "Artículo 4 - Constitución (Reforma 2024)",
+          "contenido": "Prohibido todo maltrato animal. El Estado debe protegerlos, garantizar cuidado y trato digno.",
+          "penalidad": "Delito federal: multa y prisión",
+          "aplica": ["Todos los animales"]
+        },
+        {
+          "numero": "Artículo 419 - Código Penal Federal",
+          "contenido": "Quien maltrate, cause daño o muerte: prisión 6 meses a 4 años + multa. Agrava si es reiterado o con crueldad.",
+          "aplica": ["Todos"]
+        },
+        {
+          "numero": "Artículo 87 Bis - LGEEPA",
+          "contenido": "Obligación: agua, comida, refugio, salud, libertad de movimiento, evitar dolor.",
+          "penalidad": "Multa 20-2000 UMAS",
+          "aplica": ["Dueños, encargados"]
+        }
+      ]
+    },
+    {
+      "nombre": "Tenencia Responsable",
+      "descripcion": "Qué debes cumplir si tienes o cuidas un animal: vacunas, identificación, no dejarlo libre",
+      "palabras_clave": ["responsable", "vacunas", "esterilización", "identificación", "mascota"],
+      "articulos": [
+        {
+          "numero": "Artículo 26 - Ley Protección Animal CDMX / Leyes Estatales",
+          "contenido": "Debes esterilizar, vacunar, identificar, no dejarlo en vía pública. Es tu responsabilidad por siempre.",
+          "aplica": ["Dueños"]
+        }
+      ]
+    },
+    {
+      "nombre": "Espectáculos crueles / explotación",
+      "descripcion": "Circos, peleas, corridas, carga excesiva, usarlos para espectáculos que les hacen daño",
+      "palabras_clave": ["circo", "peleas", "espectáculo", "explotación", "carga", "daño"],
+      "articulos": [
+        {
+          "numero": "Artículo 4 - Constitución",
+          "contenido": "Prohibido usar animales en espectáculos que les causen dolor, sufrimiento o muerte.",
+          "penalidad": "Clausura + multa + prisión",
+          "aplica": ["Organizadores, dueños"]
+        }
+      ]
+    }
+  ]
+}
+
