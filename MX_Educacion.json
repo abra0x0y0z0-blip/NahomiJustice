@@ -1,0 +1,131 @@
+{
+  "titulo": "Derecho a la Educación - México",
+  "subtitulo": "La educación es un derecho, no un privilegio. Conoce lo que te corresponde, cómo debe ser y qué hacer si lo niegan.",
+  "autor": "NahomiJustice - Conocimiento y Libertad",
+  "version": "1.0",
+  "color_theme": "azul_educacion",
+  "situaciones": [
+    {
+      "nombre": "Acceso y Gratuidad",
+      "descripcion": "Te niegan el ingreso a la escuela, te piden cuotas obligatorias o te cobran por inscribirte",
+      "palabras_clave": ["ingreso", "inscripción", "gratuita", "cuotas", "cobros", "acceso", "escuela"],
+      "articulos": [
+        {
+          "numero": "Artículo 3 - Constitución Política",
+          "contenido": "Toda persona tiene derecho a la educación. El Estado la impartirá, promoverá y garantizará. La educación pública es laica, gratuita y obligatoria (preescolar, primaria, secundaria, media superior).",
+          "aplica": ["Todos los niños, jóvenes y adultos"]
+        },
+        {
+          "numero": "Artículo 13 - Ley General de Educación",
+          "contenido": "Prohibido cobrar cuotas, inscripciones, exámenes o cualquier concepto que condicione el ingreso o permanencia. Las aportaciones voluntarias son solo eso: voluntarias, y no pueden exigirse.",
+          "penalidad": "Multa de 100 a 500 UMAS + responsabilidad administrativa del directivo",
+          "aplica": ["Alumnos, padres de familia"]
+        },
+        {
+          "numero": "Artículo 16 - Ley General de Educación",
+          "contenido": "Nadie puede ser excluido ni discriminado por condición económica, discapacidad, origen, género o creencias para ingresar o permanecer en la escuela.",
+          "aplica": ["Todos los educandos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Calidad y Equidad Educativa",
+      "descripcion": "La escuela no tiene maestros, no tiene materiales, está en mal estado o la enseñanza es deficiente",
+      "palabras_clave": ["calidad", "maestros", "materiales", "instalaciones", "equidad", "aprendizaje"],
+      "articulos": [
+        {
+          "numero": "Artículo 3 - Constitución",
+          "contenido": "La educación debe ser de calidad: debe garantizar el máximo logro de aprendizaje, tener buenos maestros, planes adecuados y condiciones dignas.",
+          "aplica": ["Todos"]
+        },
+        {
+          "numero": "Artículo 37 - Ley General de Educación",
+          "contenido": "Las escuelas deben contar con infraestructura segura, mobiliario, libros, materiales, tecnología, agua potable, luz y servicios sanitarios dignos.",
+          "penalidad": "Suspensión o destitución de responsables",
+          "aplica": ["Autoridades educativas, gobiernos"]
+        },
+        {
+          "numero": "Artículo 40 - Ley General de Educación",
+          "contenido": "El Estado debe dar apoyos especiales: becas, útiles, transporte y alimentación para quienes lo necesiten, para que nadie se quede sin estudiar por falta de recursos.",
+          "aplica": ["Estudiantes de bajos recursos, zonas marginadas"]
+        }
+      ]
+    },
+    {
+      "nombre": "Educación Especial e Inclusiva",
+      "descripcion": "Tu hijo o tú tienen discapacidad o necesidades especiales y la escuela no quiere recibirte o no tiene apoyos",
+      "palabras_clave": ["inclusión", "discapacidad", "necesidades especiales", "apoyos", "adaptaciones", "educación especial"],
+      "articulos": [
+        {
+          "numero": "Artículo 3 - Constitución",
+          "contenido": "La educación debe ser inclusiva. Se deben hacer ajustes razonables, adaptar programas y dar apoyos necesarios para que personas con discapacidad o condiciones especiales estudien en igualdad.",
+          "aplica": ["Personas con discapacidad, aptas sobresalientes"]
+        },
+        {
+          "numero": "Artículo 63 - Ley General de Educación",
+          "contenido": "Prohibido separar, aislar o negar el ingreso por discapacidad. Obligación de contar con docentes capacitados, materiales adaptados e infraestructura accesible.",
+          "penalidad": "Multa de 300 a 1000 UMAS",
+          "aplica": ["Escuelas públicas y privadas"]
+        }
+      ]
+    },
+    {
+      "nombre": "Protección contra Violencia Escolar",
+      "descripcion": "Hay acoso escolar, bullying, malos tratos, golpes o abuso de autoridad de maestros o directivos",
+      "palabras_clave": ["acoso", "bullying", "violencia", "maltrato", "abuso", "autoridad", "escuela"],
+      "articulos": [
+        {
+          "numero": "Artículo 3º - Constitución",
+          "contenido": "La educación debe fomentar el respeto, la convivencia pacífica y la cultura de paz. Queda prohibida toda forma de violencia en las escuelas: física, psicológica, verbal o digital.",
+          "aplica": ["Alumnos, maestros, personal"]
+        },
+        {
+          "numero": "Artículo 73 - Ley General de Educación",
+          "contenido": "Obligación de las escuelas de tener protocolos contra el acoso escolar, denunciar hechos, proteger a la víctima y sancionar al agresor. El silencio es complicidad.",
+          "penalidad": "Suspensión, multa y responsabilidad penal si hay delito",
+          "aplica": ["Directivos, docentes, personal escolar"]
+        },
+        {
+          "numero": "Artículo 42 - Ley General de los Derechos de Niñas, Niños y Adolescentes",
+          "contenido": "Tienes derecho a ser tratado con respeto y dignidad. Nadie puede humillar, golpear, insultar o hacer daño dentro de la escuela.",
+          "aplica": ["Menores de 18 años"]
+        }
+      ]
+    },
+    {
+      "nombre": "Educación Superior y Becas",
+      "descripcion": "Quieres estudiar carrera, maestría o solicitar beca y te niegan el acceso o el apoyo",
+      "palabras_clave": ["universidad", "superior", "beca", "apoyo", "económico", "ingreso"],
+      "articulos": [
+        {
+          "numero": "Artículo 3 - Constitución",
+          "contenido": "La educación superior es un derecho. El Estado la promueve y garantiza el acceso según la capacidad y vocación, buscando cobertura universal.",
+          "aplica": ["Jóvenes y adultos"]
+        },
+        {
+          "numero": "Artículo 92 - Ley General de Educación",
+          "contenido": "El Estado debe otorgar becas y apoyos económicos para que ningún estudiante capaz se quede sin estudiar por falta de dinero. Las reglas deben ser claras y públicas.",
+          "aplica": ["Todos los niveles educativos"]
+        }
+      ]
+    },
+    {
+      "nombre": "Libertad de Cátedra y Pensamiento",
+      "descripcion": "Te obligan a pensar igual, prohíben temas o castigan por tus opiniones o creencias",
+      "palabras_clave": ["libertad", "cátedra", "pensamiento", "opinión", "creencias", "enseñanza"],
+      "articulos": [
+        {
+          "numero": "Artículo 3 - Constitución",
+          "contenido": "Es inviolable la libertad de cátedra e investigación. La educación debe basarse en el progreso científico, respetar la libertad, los derechos humanos y la dignidad de la persona.",
+          "aplica": ["Maestros, alumnos"]
+        },
+        {
+          "numero": "Artículo 15 - Ley General de Educación",
+          "contenido": "La educación debe ser laica, ajena a cualquier doctrina religiosa, y basada en el respeto a los valores, la diversidad y las ideas.",
+          "aplica": ["Sistema educativo público"]
+        }
+      ]
+    }
+  ]
+}
+

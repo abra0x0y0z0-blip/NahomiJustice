@@ -1,0 +1,97 @@
+{
+  "titulo": "Derechos del Consumidor - México",
+  "subtitulo": "Cuando compras, tienes poder. Calidad, garantías, cambios, devoluciones y trato justo.",
+  "autor": "NahomiJustice - Compra Segura",
+  "version": "1.0",
+  "color_theme": "verde_consumo",
+  "situaciones": [
+    {
+      "nombre": "Garantías y Productos Defectuosos",
+      "descripcion": "Compraste algo y salió malo, no sirve o se rompió rápido. No te quieren cambiar o devolver dinero",
+      "palabras_clave": ["garantía", "defectuoso", "mal estado", "cambio", "devolución", "reparación", "dinero"],
+      "articulos": [
+        {
+          "numero": "Artículo 23 - Ley Federal de Protección al Consumidor",
+          "contenido": "Todos los productos y servicios tienen garantía mínima de 6 meses (salvo especificación mayor). Si falla: elige entre CAMBIO, REPARACIÓN o DEVOLUCIÓN del dinero.",
+          "aplica": ["Todo lo que compres"]
+        },
+        {
+          "numero": "Artículo 24 - LFPC",
+          "contenido": "No pueden decir 'artículos sin devolución' o 'cambios solo por tiqueta'. Eso es ilegal. La garantía es obligatoria por ley.",
+          "penalidad": "Multa de 50 a 2000 UMAS",
+          "aplica": ["Tiendas, comercios, servicios"]
+        }
+      ]
+    },
+    {
+      "nombre": "Precios, Publicidad y Engaños",
+      "descripcion": "Te cobraron más de lo marcado, la oferta era mentira o te vendieron algo diferente a lo prometido",
+      "palabras_clave": ["precio", "etiqueta", "publicidad", "oferta", "engaño", "cobro extra", "promoción"],
+      "articulos": [
+        {
+          "numero": "Artículo 18 - LFPC",
+          "contenido": "El precio en etiqueta o anuncio es FIJO. Te deben cobrar el precio más bajo si hay diferencia entre estante y caja. Prohibido cobrar más por pago con tarjeta.",
+          "aplica": ["Todos los comercios"]
+        },
+        {
+          "numero": "Artículo 32 - LFPC",
+          "contenido": "Lo que dice la publicidad es OBLIGATORIO. Si prometen características, regalos o calidad, deben cumplirlo al pie de la letra. Si no, es engaño.",
+          "penalidad": "Multa y sanción por publicidad engañosa",
+          "aplica": ["Anunciantes, vendedores"]
+        }
+      ]
+    },
+    {
+      "nombre": "Servicios Malos o Cobros Indebidos",
+      "descripcion": "Te dieron mal servicio, te cobraron cosas que no pediste o no te quieren cancelar un servicio",
+      "palabras_clave": ["servicio", "teléfono", "internet", "luz", "agua", "cobro extra", "cancelación", "contrato"],
+      "articulos": [
+        {
+          "numero": "Artículo 52 - LFPC",
+          "contenido": "Tienes derecho a recibir el servicio en tiempo, forma y calidad prometida. Si fallan, bonificaciones, descuentos o devolución de lo cobrado de más.",
+          "aplica": ["Luz, agua, teléfono, internet, gas"]
+        },
+        {
+          "numero": "Artículo 65 - LFPC",
+          "contenido": "PUEDES cancelar tu contrato cuando quieras, sin penalizaciones excesivas ni trámites imposibles. Solo avisa con tiempo razonable. Prohibido obligarte a plazos forzosos ilegales.",
+          "aplica": ["Servicios contratados"]
+        }
+      ]
+    },
+    {
+      "nombre": "Compras en Internet o a Distancia",
+      "descripcion": "Compraste por app/web, no te llegó, llegó distinto o te cobraron de más",
+      "palabras_clave": ["internet", "web", "app", "envío", "entrega", "reembolso", "compra en línea"],
+      "articulos": [
+        {
+          "numero": "Artículo 76 - LFPC",
+          "contenido": "En compras por internet tienes DERECHO AL ARREPENTIMIENTO: puedes devolver lo comprado en hasta 5 días hábiles SIN EXPLICACIÓN y te devuelven TODO el dinero (incluido envío).",
+          "aplica": ["Compras en línea, teléfono, catálogo"]
+        },
+        {
+          "numero": "Artículo 79 - LFPC",
+          "contenido": "Deben entregarte lo comprado en plazo pactado. Si no llega o es diferente: reembolso total + indemnización del 20% del valor.",
+          "aplica": ["Vendedores digitales"]
+        }
+      ]
+    },
+    {
+      "nombre": "Contratos y Letra Chica",
+      "descripcion": "Te hicieron firmar algo que no entendiste, había letra chica o condiciones abusivas",
+      "palabras_clave": ["contrato", "letra chica", "cláusulas", "firma", "abusivo", "obligaciones"],
+      "articulos": [
+        {
+          "numero": "Artículo 85 - LFPC",
+          "contenido": "Las cláusulas abusivas SON NULAS (no valen): multas excesivas, renuncia de derechos, cambios unilaterales. Todo debe estar en letra grande, clara y legible.",
+          "aplica": ["Cualquier contrato de consumo"]
+        },
+        {
+          "numero": "Artículo 86 - LFPC",
+          "contenido": "Lo que no esté escrito en el contrato NO EXISTE. No creas en promesas de palabra si no vienen en el papel.",
+          "aplica": ["Compradores"]
+        }
+      ]
+    }
+  ]
+}
+
