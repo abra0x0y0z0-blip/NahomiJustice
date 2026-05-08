@@ -17,7 +17,7 @@
 <pre>
 NahomiJustice/
 ├── NahomiJustice.html   # La aplicación principal
-└── bases_legales/       # Archivos JSON con leyes de México
+# Archivos JSON con leyes de México
 ├── MX_Laboral.json
 ├── MX_Familiar.json
 ├── MX_Penal.json
